@@ -22,6 +22,11 @@
   </url>
   
   <url>
+    <loc>https://atom-haskell.github.io/installation/installing-binary-dependencies/</loc>
+    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://atom-haskell.github.io/</loc>
     <lastmod>2017-03-12T23:57:42+03:00</lastmod>
   </url>
@@ -42,13 +47,13 @@
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/overview/installation/</loc>
+    <loc>https://atom-haskell.github.io/core-packages/autocomplete-haskell/</loc>
     <lastmod>2017-03-13T00:05:13+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/core-packages/autocomplete-haskell/</loc>
-    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
+    <loc>https://atom-haskell.github.io/installation/</loc>
+    <lastmod>2017-03-13T06:17:48+03:00</lastmod>
   </url>
   
   <url>
@@ -75,6 +80,12 @@
   <url>
     <loc>https://atom-haskell.github.io/extra-packages/</loc>
     <lastmod>2017-03-13T03:02:30+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://atom-haskell.github.io/installation/</loc>
+    <lastmod>2017-03-13T06:17:48+03:00</lastmod>
     <priority>0</priority>
   </url>
   

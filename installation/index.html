@@ -25,7 +25,7 @@
     
 
   </head>
-  <body class="" data-url="/overview/installation/">
+  <body class="" data-url="/installation/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -131,6 +131,10 @@
             
           
         
+          
+            
+          
+        
       
       
       
@@ -142,7 +146,7 @@
       
       
 
-      <li class="dd-item  parent" data-nav-id="/overview/">
+      <li class="dd-item  " data-nav-id="/overview/">
         <a href="/overview/">
           <span>
             
@@ -173,10 +177,38 @@
             </li>
           
           
+        </ul>
+        
+      </li>
+      
+      
+      
+
+      
+        
+      
+      
+      
+
+      <li class="dd-item active parent" data-nav-id="/installation/">
+        <a href="/installation/">
+          <span>
+            
+              <b>II. </b>
+            
+             Installation
+            
+           </span>
+        </a>
+        
+        <ul>
           
-            <li class="dd-item active" data-nav-id="/overview/installation/">
-              <a href="/overview/installation/">
-                <span>Installation     </i></span>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/installation/installing-binary-dependencies/">
+              <a href="/installation/installing-binary-dependencies/">
+                <span>Installing binary dependencies     </i></span>
               </a>
             </li>
           
@@ -198,7 +230,7 @@
         <a href="/core-packages/">
           <span>
             
-              <b>II. </b>
+              <b>III. </b>
             
              Core Packages
             
@@ -266,7 +298,7 @@
         <a href="/extra-packages/">
           <span>
             
-              <b>III. </b>
+              <b>IV. </b>
             
              Extra Packages
             
@@ -326,7 +358,7 @@
                 
                 
               <div id="top-github-link">
-                  <a class="github-link" href="https://github.com/atom-haskell/atom-haskell-docs/edit/master/content/overview/installation.md" target="blank">
+                  <a class="github-link" href="https://github.com/atom-haskell/atom-haskell-docs/edit/master/content/installation/index.md" target="blank">
                     <i class="fa fa-code-fork"></i>
                     Edit this page
                   </a>
@@ -340,8 +372,6 @@
                       </a>
                   </span>
                 
-                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
-                
                 
                 
                 
@@ -352,156 +382,30 @@
                   
                     
                     
-                <a href="/overview/" itemprop="url"><span itemprop="title">Overview</span></a> <i class="fa fa-angle-right"></i>
-                    
+                  
+                
                   
                 
                 <span itemprop="title"> Installation</span>
               </div>
               
-                  <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#installing-binary-dependencies">Installing binary dependencies</a>
-<ul>
-<li><a href="#with-stack">With <code>stack</code></a></li>
-<li><a href="#with-cabal">With <code>cabal</code></a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-    </div>
-</div>
-
-              
 
             </div>
             
+              <div id="chapter">
+            
     	        <div id="body-inner">
                 
-                <h1>Installation</h1>
-                
 
 
 
-<h2 id="installing-binary-dependencies">Installing binary dependencies</h2>
+<h3 id="chapter-ii">Chapter II</h3>
 
-<div class="notices info" ><p>Supported <code>ghc-mod</code> versions are 5.6. and up.</p>
-</div>
-
-
-<h3 id="with-stack">With <code>stack</code></h3>
-
-<p>The most reliable way to build these executable binaries is to use
-<code>stack install</code>.</p>
-
-<p>Run the following commands from a command line terminal after you finish
-installing the minimal Haskell toolchain:</p>
-
-<pre><code class="language-bash">$ stack install stylish-haskell
-...
-Copied executables to {STACK_INSTALL_PATH}:
-- stylish-haskell
-$ stack install ghc-mod
-...
-Copied executables to {STACK_INSTALL_PATH}:
-- ghc-mod
-- ghc-modi
-</code></pre>
-
-<p>&hellip; where <code>STACK_INSTALL_PATH</code> depends on your operating system.  For example,
-on OS X or Linux this path will usually be <code>~/.local/bin/</code>.</p>
-
-<p>First, make sure that <code>STACK_INSTALL_PATH</code> is on your executable search path
-(i.e. <code>$PATH</code> for OS X and Linux).</p>
-
-<div class="notices warning" ><p>On Linux, avoid setting <code>PATH</code> in <code>.bashrc</code>/<code>.zshrc</code>. These scripts are only executed in <em>interactive</em> shells, which means you&rsquo;ll have to start Atom from terminal session for it to pick <code>PATH</code> up correctly.</p>
-</div>
+<h1 id="installation">Installation</h1>
 
 
-<div class="notices warning" ><p>On OSX, Atom can fail to set <code>PATH</code> correctly regardles.</p>
-</div>
-
-
-<p>If Atom fails to find a required executable (such as <code>stylish-haskell</code>) you will
-get an error that reads something like this:</p>
-
-<blockquote>
-<p>Ide-haskell could not spawn stylish-haskell</p>
-
-<p>Error: spawn stylish-haskell ENOENT</p>
-</blockquote>
-
-<p>If this happens, you will need to modify relevant package&rsquo;s settings to point to the absolute path to where you installed the executable.  For example,
-if your <code>STACK_INSTALL_PATH</code> were <code>/home/johndoe/.local/bin/</code> then the
-absolute path to the executable would be
-<code>/home/johndoe/.local/bin/executable</code>.</p>
-
-<h3 id="with-cabal">With <code>cabal</code></h3>
-
-<div class="notices info" ><p>You do not need to do this if you already installed with stack.</p>
-</div>
-
-
-<p>Alternatively, you can use <code>cabal-install</code> if you don&rsquo;t want to use stack for some reason.</p>
-
-<p>It is advisable to first create a cabal sandbox for the installation to avoid global package database pollution and conflicts. This will also make updating easy.</p>
-
-<p>To create a sandbox, create a directory, f.ex.</p>
-
-<pre><code class="language-bash">mkdir $HOME/ghc-mod-sandbox
-</code></pre>
-
-<div class="notices info" ><p>Windows command line shell uses different syntax for environment variables, and there is usually no <code>HOME</code> defined anyway. We sincerely hope you can figure this out.</p>
-</div>
-
-
-<p>Then, <code>cd</code> into int:</p>
-
-<pre><code class="language-bash">cd $HOME/ghc-mod-sandbox
-</code></pre>
-
-<p>And run the following command</p>
-
-<pre><code class="language-bash">cabal sandbox init --sandbox=.
-</code></pre>
-
-<div class="notices tip" ><p>The last part, namely <code>--sandbox=.</code>, is used to shorten paths. By default, <code>cabal</code> will create sandbox in <code>.cabal-sandbox</code> directory. This option tells it to use current directory instead.</p>
-</div>
-
-
-<div class="notices tip" ><p>If you decide not to use sandbox for some reason, by default cabal will install binaries into <code>$HOME/.cabal/bin/</code> on Linux and <code>$HOME/Library/Haskell/bin</code> on OSX.</p>
-</div>
-
-
-<p>Now you can install ghc-mod and stylish-haskell. <em>In the same directory</em> run</p>
-
-<pre><code class="language-bash">cabal install ghc-mod stylish-haskell
-</code></pre>
-
-<p>Now you have ghc-mod and stylish-haskell installed. Binary files are in <code>$HOME/ghc-mod-sandbox/bin</code>. You can add this path to <code>PATH</code>, or put full path to <strong>executables</strong> in relevant <code>ide-haskell</code> and <code>haskell-ghc-mod</code> settings.</p>
-
-<p>For example, assuming your <code>HOME</code> is <code>/home/user</code>:</p>
-
-<ul>
-<li>In ide-haskell settings, set &lsquo;Stylish Haskell Path&rsquo; to <code>/home/user/ghc-mod-sandbox/bin/stylish-haskell</code></li>
-<li>In haskell-ghc-mod settings, set &lsquo;Ghc Mod Path&rsquo; to <code>/home/user/ghc-mod-sandbox/bin/ghc-mod</code></li>
-</ul>
-
-<div class="notices warning" ><p>Don&rsquo;t forget to replace <code>$HOME</code> with actual path to home directory! Atom doesn&rsquo;t expand shell variables in package settings.</p>
-</div>
-
-
-<div class="notices tip" ><p>On Linux and OSX, you can run
-<code>echo $HOME/ghc-mod-sandbox/bin/*</code>
-in the terminal to get actual paths to all executables, if not sure what those should look like.</p>
-</div>
-
-
-
+      
+        </div> 
       
       </div>
     </div>

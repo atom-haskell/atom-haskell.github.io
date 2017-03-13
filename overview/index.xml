@@ -144,11 +144,11 @@ instructions here:&lt;/p&gt;
 &lt;h2 id=&#34;core-atom-haskell-packages&#34;&gt;Core Atom-Haskell packages&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://atom.io/packages/language-haskell&#34;&gt;&lt;code&gt;language-haskell&lt;/code&gt;&lt;/a&gt; - Syntax highlighting and Haskell autodetection &lt;strong&gt;ABSOLUTELY REQUIRED!&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://atom.io/packages/ide-haskell&#34;&gt;&lt;code&gt;ide-haskell&lt;/code&gt;&lt;/a&gt; - GUI and minimal utilities &lt;strong&gt;ABSOLUTELY REQUIRED!&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://atom.io/packages/ide-haskell-cabal&#34;&gt;&lt;code&gt;ide-haskell-cabal&lt;/code&gt;&lt;/a&gt; - Build Haskell projects with either &lt;code&gt;cabal&lt;/code&gt; or &lt;code&gt;stack&lt;/code&gt;. Reports errors/warnings on build.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://atom.io/packages/haskell-ghc-mod&#34;&gt;&lt;code&gt;haskell-ghc-mod&lt;/code&gt;&lt;/a&gt; - ghc-mod integration. Typecheck and lint sources without building, query type information and more.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://atom.io/packages/autocomplete-haskell&#34;&gt;&lt;code&gt;autocomplete-haskell&lt;/code&gt;&lt;/a&gt; - Autocompletion support. This plugin depends on &lt;code&gt;haskell-ghc-mod&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://atom.io/packages/language-haskell&#34;&gt;&lt;code&gt;language-haskell&lt;/code&gt;&lt;/a&gt; &amp;ndash; Syntax highlighting and Haskell autodetection &lt;strong&gt;ABSOLUTELY REQUIRED!&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://atom.io/packages/ide-haskell&#34;&gt;&lt;code&gt;ide-haskell&lt;/code&gt;&lt;/a&gt; &amp;ndash; GUI and minimal utilities &lt;strong&gt;ABSOLUTELY REQUIRED!&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://atom.io/packages/ide-haskell-cabal&#34;&gt;&lt;code&gt;ide-haskell-cabal&lt;/code&gt;&lt;/a&gt; &amp;ndash; Build Haskell projects with either &lt;code&gt;cabal&lt;/code&gt; or &lt;code&gt;stack&lt;/code&gt;. Reports errors/warnings on build.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://atom.io/packages/haskell-ghc-mod&#34;&gt;&lt;code&gt;haskell-ghc-mod&lt;/code&gt;&lt;/a&gt; &amp;ndash; &lt;code&gt;ghc-mod&lt;/code&gt; integration. Typecheck and lint sources without building, query type information and more.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://atom.io/packages/autocomplete-haskell&#34;&gt;&lt;code&gt;autocomplete-haskell&lt;/code&gt;&lt;/a&gt; &amp;ndash; Autocompletion support. This plugin depends on &lt;code&gt;haskell-ghc-mod&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;extra-atom-haskell-packages&#34;&gt;Extra Atom-Haskell packages&lt;/h2&gt;
@@ -166,132 +166,11 @@ instructions here:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/jaspervdj/stylish-haskell&#34;&gt;&lt;code&gt;stylish-haskell&lt;/code&gt;&lt;/a&gt; or &lt;a href=&#34;https://github.com/commercialhaskell/hindent&#34;&gt;&lt;code&gt;hindent&lt;/code&gt;&lt;/a&gt; &amp;ndash; prettify/format your source code. Used by &lt;code&gt;ide-haskell&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/DanielG/ghc-mod&#34;&gt;&lt;code&gt;ghc-mod&lt;/code&gt;&lt;/a&gt; - Backend that does heavy lifting&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/DanielG/ghc-mod&#34;&gt;&lt;code&gt;ghc-mod&lt;/code&gt;&lt;/a&gt; &amp;ndash; backend that does heavy lifting. Used by &lt;code&gt;haskell-ghc-mod&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/MarcWeber/hasktags&#34;&gt;&lt;code&gt;hasktags&lt;/code&gt;&lt;/a&gt; &amp;ndash; indexes your sources for easy navigation. Used by &lt;code&gt;ide-haskell-hasktags&lt;/code&gt; (Optional)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hackage.haskell.org/package/pointfree&#34;&gt;&lt;code&gt;pointfree&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;https://hackage.haskell.org/package/pointful&#34;&gt;&lt;code&gt;pointful&lt;/code&gt;&lt;/a&gt; &amp;ndash; convert source to pointfree or pointful representation. Used by &lt;code&gt;haskell-pointfree&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hackage.haskell.org/package/hoogle&#34;&gt;&lt;code&gt;hoogle&lt;/code&gt;&lt;/a&gt; &amp;ndash; Haskell API search engine. Used by &lt;code&gt;ide-haskell-hoogle&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Installation</title>
-      <link>https://atom-haskell.github.io/overview/installation/</link>
-      <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
-      
-      <guid>https://atom-haskell.github.io/overview/installation/</guid>
-      <description>
-
-&lt;h2 id=&#34;installing-binary-dependencies&#34;&gt;Installing binary dependencies&lt;/h2&gt;
-
-&lt;div class=&#34;notices info&#34; &gt;&lt;p&gt;Supported &lt;code&gt;ghc-mod&lt;/code&gt; versions are 5.6. and up.&lt;/p&gt;
-&lt;/div&gt;
-
-
-&lt;h3 id=&#34;with-stack&#34;&gt;With &lt;code&gt;stack&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;The most reliable way to build these executable binaries is to use
-&lt;code&gt;stack install&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Run the following commands from a command line terminal after you finish
-installing the minimal Haskell toolchain:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ stack install stylish-haskell
-...
-Copied executables to {STACK_INSTALL_PATH}:
-- stylish-haskell
-$ stack install ghc-mod
-...
-Copied executables to {STACK_INSTALL_PATH}:
-- ghc-mod
-- ghc-modi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&amp;hellip; where &lt;code&gt;STACK_INSTALL_PATH&lt;/code&gt; depends on your operating system.  For example,
-on OS X or Linux this path will usually be &lt;code&gt;~/.local/bin/&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;First, make sure that &lt;code&gt;STACK_INSTALL_PATH&lt;/code&gt; is on your executable search path
-(i.e. &lt;code&gt;$PATH&lt;/code&gt; for OS X and Linux).&lt;/p&gt;
-
-&lt;div class=&#34;notices warning&#34; &gt;&lt;p&gt;On Linux, avoid setting &lt;code&gt;PATH&lt;/code&gt; in &lt;code&gt;.bashrc&lt;/code&gt;/&lt;code&gt;.zshrc&lt;/code&gt;. These scripts are only executed in &lt;em&gt;interactive&lt;/em&gt; shells, which means you&amp;rsquo;ll have to start Atom from terminal session for it to pick &lt;code&gt;PATH&lt;/code&gt; up correctly.&lt;/p&gt;
-&lt;/div&gt;
-
-
-&lt;div class=&#34;notices warning&#34; &gt;&lt;p&gt;On OSX, Atom can fail to set &lt;code&gt;PATH&lt;/code&gt; correctly regardles.&lt;/p&gt;
-&lt;/div&gt;
-
-
-&lt;p&gt;If Atom fails to find a required executable (such as &lt;code&gt;stylish-haskell&lt;/code&gt;) you will
-get an error that reads something like this:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Ide-haskell could not spawn stylish-haskell&lt;/p&gt;
-
-&lt;p&gt;Error: spawn stylish-haskell ENOENT&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;If this happens, you will need to modify relevant package&amp;rsquo;s settings to point to the absolute path to where you installed the executable.  For example,
-if your &lt;code&gt;STACK_INSTALL_PATH&lt;/code&gt; were &lt;code&gt;/home/johndoe/.local/bin/&lt;/code&gt; then the
-absolute path to the executable would be
-&lt;code&gt;/home/johndoe/.local/bin/executable&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;with-cabal&#34;&gt;With &lt;code&gt;cabal&lt;/code&gt;&lt;/h3&gt;
-
-&lt;div class=&#34;notices info&#34; &gt;&lt;p&gt;You do not need to do this if you already installed with stack.&lt;/p&gt;
-&lt;/div&gt;
-
-
-&lt;p&gt;Alternatively, you can use &lt;code&gt;cabal-install&lt;/code&gt; if you don&amp;rsquo;t want to use stack for some reason.&lt;/p&gt;
-
-&lt;p&gt;It is advisable to first create a cabal sandbox for the installation to avoid global package database pollution and conflicts. This will also make updating easy.&lt;/p&gt;
-
-&lt;p&gt;To create a sandbox, create a directory, f.ex.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir $HOME/ghc-mod-sandbox
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div class=&#34;notices info&#34; &gt;&lt;p&gt;Windows command line shell uses different syntax for environment variables, and there is usually no &lt;code&gt;HOME&lt;/code&gt; defined anyway. We sincerely hope you can figure this out.&lt;/p&gt;
-&lt;/div&gt;
-
-
-&lt;p&gt;Then, &lt;code&gt;cd&lt;/code&gt; into int:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd $HOME/ghc-mod-sandbox
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And run the following command&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cabal sandbox init --sandbox=.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div class=&#34;notices tip&#34; &gt;&lt;p&gt;The last part, namely &lt;code&gt;--sandbox=.&lt;/code&gt;, is used to shorten paths. By default, &lt;code&gt;cabal&lt;/code&gt; will create sandbox in &lt;code&gt;.cabal-sandbox&lt;/code&gt; directory. This option tells it to use current directory instead.&lt;/p&gt;
-&lt;/div&gt;
-
-
-&lt;div class=&#34;notices tip&#34; &gt;&lt;p&gt;If you decide not to use sandbox for some reason, by default cabal will install binaries into &lt;code&gt;$HOME/.cabal/bin/&lt;/code&gt; on Linux and &lt;code&gt;$HOME/Library/Haskell/bin&lt;/code&gt; on OSX.&lt;/p&gt;
-&lt;/div&gt;
-
-
-&lt;p&gt;Now you can install ghc-mod and stylish-haskell. &lt;em&gt;In the same directory&lt;/em&gt; run&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cabal install ghc-mod stylish-haskell
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now you have ghc-mod and stylish-haskell installed. Binary files are in &lt;code&gt;$HOME/ghc-mod-sandbox/bin&lt;/code&gt;. You can add this path to &lt;code&gt;PATH&lt;/code&gt;, or put full path to &lt;strong&gt;executables&lt;/strong&gt; in relevant &lt;code&gt;ide-haskell&lt;/code&gt; and &lt;code&gt;haskell-ghc-mod&lt;/code&gt; settings.&lt;/p&gt;
-
-&lt;p&gt;For example, assuming your &lt;code&gt;HOME&lt;/code&gt; is &lt;code&gt;/home/user&lt;/code&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;In ide-haskell settings, set &amp;lsquo;Stylish Haskell Path&amp;rsquo; to &lt;code&gt;/home/user/ghc-mod-sandbox/bin/stylish-haskell&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;In haskell-ghc-mod settings, set &amp;lsquo;Ghc Mod Path&amp;rsquo; to &lt;code&gt;/home/user/ghc-mod-sandbox/bin/ghc-mod&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&#34;notices warning&#34; &gt;&lt;p&gt;Don&amp;rsquo;t forget to replace &lt;code&gt;$HOME&lt;/code&gt; with actual path to home directory! Atom doesn&amp;rsquo;t expand shell variables in package settings.&lt;/p&gt;
-&lt;/div&gt;
-
-
-&lt;div class=&#34;notices tip&#34; &gt;&lt;p&gt;On Linux and OSX, you can run
-&lt;code&gt;echo $HOME/ghc-mod-sandbox/bin/*&lt;/code&gt;
-in the terminal to get actual paths to all executables, if not sure what those should look like.&lt;/p&gt;
-&lt;/div&gt;
-
 </description>
     </item>
     
