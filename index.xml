@@ -523,9 +523,12 @@ package based on &lt;code&gt;cabal&lt;/code&gt; or &lt;code&gt;stack&lt;/code&gt
 
 &lt;pre&gt;&lt;code class=&#34;language-cson&#34;&gt;&#39;atom-workspace&#39;:
   &#39;&#39;: &#39;ide-haskell-cabal:build&#39;
-  &#39;&#39;: &#39;ide-haskell-cabal:set-build-target&#39;
   &#39;&#39;: &#39;ide-haskell-cabal:clean&#39;
   &#39;&#39;: &#39;ide-haskell-cabal:test&#39;
+  &#39;&#39;: &#39;ide-haskell-cabal:bench&#39;
+  &#39;&#39;: &#39;ide-haskell-cabal:build-dependencies&#39;
+  &#39;&#39;: &#39;ide-haskell-cabal:set-build-target&#39;
+  &#39;&#39;: &#39;ide-haskell-cabal:set-active-builder&#39;
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
