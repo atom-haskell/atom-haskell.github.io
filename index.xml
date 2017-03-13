@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Atom-Haskell documentation on Atom-Haskell</title>
-    <link>http://atom-haskell.github.io/index.xml</link>
+    <link>https://atom-haskell.github.io/index.xml</link>
     <description>Recent content in Atom-Haskell documentation on Atom-Haskell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 Mar 2017 23:57:42 +0300</lastBuildDate>
-    <atom:link href="http://atom-haskell.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://atom-haskell.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Language-Haskell</title>
-      <link>http://atom-haskell.github.io/core-packages/language-haskell/</link>
+      <link>https://atom-haskell.github.io/core-packages/language-haskell/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/core-packages/language-haskell/</guid>
+      <guid>https://atom-haskell.github.io/core-packages/language-haskell/</guid>
       <description>
 
 &lt;p&gt;Language-Haskell adds syntax highlighting and snippets to Haskell files in Atom.&lt;/p&gt;
@@ -109,10 +109,10 @@
     
     <item>
       <title>IDE-Haskell-Hoogle</title>
-      <link>http://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</link>
+      <link>https://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</link>
       <pubDate>Mon, 13 Mar 2017 03:03:47 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</guid>
+      <guid>https://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</guid>
       <description>
 
 &lt;p&gt;Install package &lt;code&gt;ide-haskell-hoogle&lt;/code&gt;. Refer to &lt;a href=&#34;http://flight-manual.atom.io/using-atom/sections/atom-packages/&#34;&gt;Atom Flight Manual&lt;/a&gt; for details on installing packages.&lt;/p&gt;
@@ -165,10 +165,10 @@
     
     <item>
       <title>IDE-Haskell</title>
-      <link>http://atom-haskell.github.io/core-packages/ide-haskell/</link>
+      <link>https://atom-haskell.github.io/core-packages/ide-haskell/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/core-packages/ide-haskell/</guid>
+      <guid>https://atom-haskell.github.io/core-packages/ide-haskell/</guid>
       <description>
 
 &lt;p&gt;IDE-Haskell Atom package provides basic capabilities, as well as a backend for other Atom-Haskell packages to use.&lt;/p&gt;
@@ -274,10 +274,10 @@ your keymap accordingly.&lt;/p&gt;
     
     <item>
       <title>Implemented features</title>
-      <link>http://atom-haskell.github.io/overview/implemented-features/</link>
+      <link>https://atom-haskell.github.io/overview/implemented-features/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/overview/implemented-features/</guid>
+      <guid>https://atom-haskell.github.io/overview/implemented-features/</guid>
       <description>
 
 &lt;h4 id=&#34;sytnax-highlighting&#34;&gt;Sytnax highlighting&lt;/h4&gt;
@@ -374,10 +374,10 @@ clean and test your project from ide-haskell (stack and cabal supported)&lt;/p&g
     
     <item>
       <title>IDE-Haskell-Cabal</title>
-      <link>http://atom-haskell.github.io/core-packages/ide-haskell-cabal/</link>
+      <link>https://atom-haskell.github.io/core-packages/ide-haskell-cabal/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/core-packages/ide-haskell-cabal/</guid>
+      <guid>https://atom-haskell.github.io/core-packages/ide-haskell-cabal/</guid>
       <description>
 
 &lt;p&gt;The &lt;code&gt;ide-haskell-cabal&lt;/code&gt; package provides a build backend for &lt;code&gt;ide-haskell&lt;/code&gt;
@@ -410,10 +410,10 @@ package based on &lt;code&gt;cabal&lt;/code&gt; or &lt;code&gt;stack&lt;/code&gt
     
     <item>
       <title>Requirements</title>
-      <link>http://atom-haskell.github.io/overview/requirements/</link>
+      <link>https://atom-haskell.github.io/overview/requirements/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/overview/requirements/</guid>
+      <guid>https://atom-haskell.github.io/overview/requirements/</guid>
       <description>
 
 &lt;p&gt;The Atom-Haskell packages assume that you have a minimal Haskell toolchain
@@ -456,10 +456,10 @@ instructions here:&lt;/p&gt;
     
     <item>
       <title>Haskell-ghc-mod</title>
-      <link>http://atom-haskell.github.io/core-packages/haskell-ghc-mod/</link>
+      <link>https://atom-haskell.github.io/core-packages/haskell-ghc-mod/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/core-packages/haskell-ghc-mod/</guid>
+      <guid>https://atom-haskell.github.io/core-packages/haskell-ghc-mod/</guid>
       <description>
 
 &lt;p&gt;Haskell ghc-mod opens pipe to &lt;code&gt;ghc-mod&lt;/code&gt; and queries types, info, typechecks and lints current file.&lt;/p&gt;
@@ -535,10 +535,10 @@ For example, if you have &lt;code&gt;ghc&lt;/code&gt; installed to &lt;code&gt;/
     
     <item>
       <title>Installation</title>
-      <link>http://atom-haskell.github.io/overview/installation/</link>
+      <link>https://atom-haskell.github.io/overview/installation/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/overview/installation/</guid>
+      <guid>https://atom-haskell.github.io/overview/installation/</guid>
       <description>
 
 &lt;h2 id=&#34;installing-binary-dependencies&#34;&gt;Installing binary dependencies&lt;/h2&gt;
@@ -659,10 +659,10 @@ in the terminal to get actual paths to all executables, if not sure what those s
     
     <item>
       <title>Autocomplete-Haskell</title>
-      <link>http://atom-haskell.github.io/core-packages/autocomplete-haskell/</link>
+      <link>https://atom-haskell.github.io/core-packages/autocomplete-haskell/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/core-packages/autocomplete-haskell/</guid>
+      <guid>https://atom-haskell.github.io/core-packages/autocomplete-haskell/</guid>
       <description>&lt;p&gt;Autocomplete-haskell provides autocompletion facilities for your Haskell
 hacking.
 It relies on scope names provided by &lt;code&gt;language-haskell&lt;/code&gt; and &lt;code&gt;haskell-completion-backend&lt;/code&gt; service, provided by &lt;code&gt;haskell-ghc-mod&lt;/code&gt;&lt;/p&gt;
@@ -679,10 +679,10 @@ default autocomplete-plus SymbolProvider.&lt;/p&gt;
     
     <item>
       <title>Extra Packages</title>
-      <link>http://atom-haskell.github.io/extra-packages/</link>
+      <link>https://atom-haskell.github.io/extra-packages/</link>
       <pubDate>Mon, 13 Mar 2017 03:02:30 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/extra-packages/</guid>
+      <guid>https://atom-haskell.github.io/extra-packages/</guid>
       <description>
 
 &lt;h3 id=&#34;chapter-iii&#34;&gt;Chapter III&lt;/h3&gt;
@@ -693,10 +693,10 @@ default autocomplete-plus SymbolProvider.&lt;/p&gt;
     
     <item>
       <title>Core Packages</title>
-      <link>http://atom-haskell.github.io/core-packages/</link>
+      <link>https://atom-haskell.github.io/core-packages/</link>
       <pubDate>Mon, 13 Mar 2017 00:04:29 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/core-packages/</guid>
+      <guid>https://atom-haskell.github.io/core-packages/</guid>
       <description>
 
 &lt;h3 id=&#34;chapter-ii&#34;&gt;Chapter II&lt;/h3&gt;
@@ -709,10 +709,10 @@ default autocomplete-plus SymbolProvider.&lt;/p&gt;
     
     <item>
       <title>Overview</title>
-      <link>http://atom-haskell.github.io/overview/</link>
+      <link>https://atom-haskell.github.io/overview/</link>
       <pubDate>Sun, 12 Mar 2017 23:52:44 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/overview/</guid>
+      <guid>https://atom-haskell.github.io/overview/</guid>
       <description>
 
 &lt;h3 id=&#34;chapter-i&#34;&gt;Chapter I&lt;/h3&gt;

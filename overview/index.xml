@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Overviews on Atom-Haskell</title>
-    <link>http://atom-haskell.github.io/overview/index.xml</link>
+    <link>https://atom-haskell.github.io/overview/index.xml</link>
     <description>Recent content in Overviews on Atom-Haskell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 Mar 2017 23:52:44 +0300</lastBuildDate>
-    <atom:link href="http://atom-haskell.github.io/overview/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://atom-haskell.github.io/overview/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Overview</title>
-      <link>http://atom-haskell.github.io/overview/</link>
+      <link>https://atom-haskell.github.io/overview/</link>
       <pubDate>Sun, 12 Mar 2017 23:52:44 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/overview/</guid>
+      <guid>https://atom-haskell.github.io/overview/</guid>
       <description>
 
 &lt;h3 id=&#34;chapter-i&#34;&gt;Chapter I&lt;/h3&gt;
@@ -27,10 +27,10 @@
     
     <item>
       <title>Implemented features</title>
-      <link>http://atom-haskell.github.io/overview/implemented-features/</link>
+      <link>https://atom-haskell.github.io/overview/implemented-features/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/overview/implemented-features/</guid>
+      <guid>https://atom-haskell.github.io/overview/implemented-features/</guid>
       <description>
 
 &lt;h4 id=&#34;sytnax-highlighting&#34;&gt;Sytnax highlighting&lt;/h4&gt;
@@ -127,10 +127,10 @@ clean and test your project from ide-haskell (stack and cabal supported)&lt;/p&g
     
     <item>
       <title>Requirements</title>
-      <link>http://atom-haskell.github.io/overview/requirements/</link>
+      <link>https://atom-haskell.github.io/overview/requirements/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/overview/requirements/</guid>
+      <guid>https://atom-haskell.github.io/overview/requirements/</guid>
       <description>
 
 &lt;p&gt;The Atom-Haskell packages assume that you have a minimal Haskell toolchain
@@ -173,10 +173,10 @@ instructions here:&lt;/p&gt;
     
     <item>
       <title>Installation</title>
-      <link>http://atom-haskell.github.io/overview/installation/</link>
+      <link>https://atom-haskell.github.io/overview/installation/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/overview/installation/</guid>
+      <guid>https://atom-haskell.github.io/overview/installation/</guid>
       <description>
 
 &lt;h2 id=&#34;installing-binary-dependencies&#34;&gt;Installing binary dependencies&lt;/h2&gt;

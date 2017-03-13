@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Extra-packages on Atom-Haskell</title>
-    <link>http://atom-haskell.github.io/extra-packages/index.xml</link>
+    <link>https://atom-haskell.github.io/extra-packages/index.xml</link>
     <description>Recent content in Extra-packages on Atom-Haskell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 13 Mar 2017 03:02:30 +0300</lastBuildDate>
-    <atom:link href="http://atom-haskell.github.io/extra-packages/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://atom-haskell.github.io/extra-packages/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Extra Packages</title>
-      <link>http://atom-haskell.github.io/extra-packages/</link>
+      <link>https://atom-haskell.github.io/extra-packages/</link>
       <pubDate>Mon, 13 Mar 2017 03:02:30 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/extra-packages/</guid>
+      <guid>https://atom-haskell.github.io/extra-packages/</guid>
       <description>
 
 &lt;h3 id=&#34;chapter-iii&#34;&gt;Chapter III&lt;/h3&gt;
@@ -25,10 +25,10 @@
     
     <item>
       <title>IDE-Haskell-Hoogle</title>
-      <link>http://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</link>
+      <link>https://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</link>
       <pubDate>Mon, 13 Mar 2017 03:03:47 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</guid>
+      <guid>https://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</guid>
       <description>
 
 &lt;p&gt;Install package &lt;code&gt;ide-haskell-hoogle&lt;/code&gt;. Refer to &lt;a href=&#34;http://flight-manual.atom.io/using-atom/sections/atom-packages/&#34;&gt;Atom Flight Manual&lt;/a&gt; for details on installing packages.&lt;/p&gt;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Core-packages on Atom-Haskell</title>
-    <link>http://atom-haskell.github.io/core-packages/index.xml</link>
+    <link>https://atom-haskell.github.io/core-packages/index.xml</link>
     <description>Recent content in Core-packages on Atom-Haskell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 13 Mar 2017 00:04:29 +0300</lastBuildDate>
-    <atom:link href="http://atom-haskell.github.io/core-packages/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://atom-haskell.github.io/core-packages/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Core Packages</title>
-      <link>http://atom-haskell.github.io/core-packages/</link>
+      <link>https://atom-haskell.github.io/core-packages/</link>
       <pubDate>Mon, 13 Mar 2017 00:04:29 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/core-packages/</guid>
+      <guid>https://atom-haskell.github.io/core-packages/</guid>
       <description>
 
 &lt;h3 id=&#34;chapter-ii&#34;&gt;Chapter II&lt;/h3&gt;
@@ -27,10 +27,10 @@
     
     <item>
       <title>Language-Haskell</title>
-      <link>http://atom-haskell.github.io/core-packages/language-haskell/</link>
+      <link>https://atom-haskell.github.io/core-packages/language-haskell/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/core-packages/language-haskell/</guid>
+      <guid>https://atom-haskell.github.io/core-packages/language-haskell/</guid>
       <description>
 
 &lt;p&gt;Language-Haskell adds syntax highlighting and snippets to Haskell files in Atom.&lt;/p&gt;
@@ -125,10 +125,10 @@
     
     <item>
       <title>IDE-Haskell</title>
-      <link>http://atom-haskell.github.io/core-packages/ide-haskell/</link>
+      <link>https://atom-haskell.github.io/core-packages/ide-haskell/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/core-packages/ide-haskell/</guid>
+      <guid>https://atom-haskell.github.io/core-packages/ide-haskell/</guid>
       <description>
 
 &lt;p&gt;IDE-Haskell Atom package provides basic capabilities, as well as a backend for other Atom-Haskell packages to use.&lt;/p&gt;
@@ -234,10 +234,10 @@ your keymap accordingly.&lt;/p&gt;
     
     <item>
       <title>IDE-Haskell-Cabal</title>
-      <link>http://atom-haskell.github.io/core-packages/ide-haskell-cabal/</link>
+      <link>https://atom-haskell.github.io/core-packages/ide-haskell-cabal/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/core-packages/ide-haskell-cabal/</guid>
+      <guid>https://atom-haskell.github.io/core-packages/ide-haskell-cabal/</guid>
       <description>
 
 &lt;p&gt;The &lt;code&gt;ide-haskell-cabal&lt;/code&gt; package provides a build backend for &lt;code&gt;ide-haskell&lt;/code&gt;
@@ -270,10 +270,10 @@ package based on &lt;code&gt;cabal&lt;/code&gt; or &lt;code&gt;stack&lt;/code&gt
     
     <item>
       <title>Haskell-ghc-mod</title>
-      <link>http://atom-haskell.github.io/core-packages/haskell-ghc-mod/</link>
+      <link>https://atom-haskell.github.io/core-packages/haskell-ghc-mod/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/core-packages/haskell-ghc-mod/</guid>
+      <guid>https://atom-haskell.github.io/core-packages/haskell-ghc-mod/</guid>
       <description>
 
 &lt;p&gt;Haskell ghc-mod opens pipe to &lt;code&gt;ghc-mod&lt;/code&gt; and queries types, info, typechecks and lints current file.&lt;/p&gt;
@@ -349,10 +349,10 @@ For example, if you have &lt;code&gt;ghc&lt;/code&gt; installed to &lt;code&gt;/
     
     <item>
       <title>Autocomplete-Haskell</title>
-      <link>http://atom-haskell.github.io/core-packages/autocomplete-haskell/</link>
+      <link>https://atom-haskell.github.io/core-packages/autocomplete-haskell/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
-      <guid>http://atom-haskell.github.io/core-packages/autocomplete-haskell/</guid>
+      <guid>https://atom-haskell.github.io/core-packages/autocomplete-haskell/</guid>
       <description>&lt;p&gt;Autocomplete-haskell provides autocompletion facilities for your Haskell
 hacking.
 It relies on scope names provided by &lt;code&gt;language-haskell&lt;/code&gt; and &lt;code&gt;haskell-completion-backend&lt;/code&gt; service, provided by &lt;code&gt;haskell-ghc-mod&lt;/code&gt;&lt;/p&gt;
