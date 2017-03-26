@@ -37,11 +37,6 @@
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/extra-packages/</loc>
-    <lastmod>2017-03-13T03:02:30+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://atom-haskell.github.io/core-packages/ide-haskell-cabal/</loc>
     <lastmod>2017-03-13T00:05:13+03:00</lastmod>
   </url>
@@ -52,13 +47,18 @@
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/core-packages/haskell-ghc-mod/</loc>
-    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
+    <loc>https://atom-haskell.github.io/core-packages/</loc>
+    <lastmod>2017-03-13T00:04:29+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/core-packages/</loc>
-    <lastmod>2017-03-13T00:04:29+03:00</lastmod>
+    <loc>https://atom-haskell.github.io/extra-packages/</loc>
+    <lastmod>2017-03-13T03:02:30+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://atom-haskell.github.io/core-packages/haskell-ghc-mod/</loc>
+    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
   </url>
   
   <url>
