@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Extra-packages on Atom-Haskell</title>
+    <title>Extra Packages on Atom-Haskell</title>
     <link>https://atom-haskell.github.io/extra-packages/index.xml</link>
-    <description>Recent content in Extra-packages on Atom-Haskell</description>
+    <description>Recent content in Extra Packages on Atom-Haskell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 13 Mar 2017 03:02:30 +0300</lastBuildDate>
     <atom:link href="https://atom-haskell.github.io/extra-packages/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Extra Packages</title>
-      <link>https://atom-haskell.github.io/extra-packages/</link>
-      <pubDate>Mon, 13 Mar 2017 03:02:30 +0300</pubDate>
-      
-      <guid>https://atom-haskell.github.io/extra-packages/</guid>
-      <description>
-
-&lt;h3 id=&#34;chapter-iii&#34;&gt;Chapter III&lt;/h3&gt;
-
-&lt;h1 id=&#34;extra-packages&#34;&gt;Extra Packages&lt;/h1&gt;
-</description>
-    </item>
     
     <item>
       <title>IDE-Haskell-Hoogle</title>

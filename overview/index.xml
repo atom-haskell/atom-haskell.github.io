@@ -1,29 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Overviews on Atom-Haskell</title>
+    <title>Overview on Atom-Haskell</title>
     <link>https://atom-haskell.github.io/overview/index.xml</link>
-    <description>Recent content in Overviews on Atom-Haskell</description>
+    <description>Recent content in Overview on Atom-Haskell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 Mar 2017 23:52:44 +0300</lastBuildDate>
     <atom:link href="https://atom-haskell.github.io/overview/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Overview</title>
-      <link>https://atom-haskell.github.io/overview/</link>
-      <pubDate>Sun, 12 Mar 2017 23:52:44 +0300</pubDate>
-      
-      <guid>https://atom-haskell.github.io/overview/</guid>
-      <description>
-
-&lt;h3 id=&#34;chapter-i&#34;&gt;Chapter I&lt;/h3&gt;
-
-&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
-
-&lt;p&gt;Welcome to Atom-Haskell project! We aim to bring awesome &lt;a href=&#34;http://haskell.org&#34;&gt;Haskell&lt;/a&gt; support to the amazing &lt;a href=&#34;http://atom.io&#34;&gt;Atom&lt;/a&gt; editor.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Features</title>

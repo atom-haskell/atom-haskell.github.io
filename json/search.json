@@ -6,6 +6,12 @@
         "tags": []
     },
     {
+        "uri": "/content/core-packages/_index",
+        "title": "Core Packages",
+        "content": "\nChapter II\n\n Packages\n\nA detailed overview of Atom-Haskell packages.\n",
+        "tags": []
+    },
+    {
         "uri": "/content/core-packages/autocomplete-haskell",
         "title": "Autocomplete-Haskell",
         "content": "\nAutocomplete-haskell provides autocompletion facilities for your Haskell\nhacking.\nIt relies on scope names provided by language-haskell and haskell-completion-backend service, provided by haskell-ghc-mod\n\nYou can show auto-completions for hole _. This will try to find replacements\nbased on type. It's no magic though, so if hole has some crazy type, it won't\nfind anything. You can also refine hole completions based on name by using named holes, e.g. _from\n\nSadly, it does not pick up types and/or other symbols defined in current file\n(ghc-mod seems to be incapable of this feat), so for this you have to rely on\ndefault autocomplete-plus SymbolProvider.\n",
@@ -30,15 +36,15 @@
         "tags": []
     },
     {
-        "uri": "/content/core-packages/index",
-        "title": "Core Packages",
-        "content": "\nChapter II\n\n Packages\n\nA detailed overview of Atom-Haskell packages.\n",
-        "tags": []
-    },
-    {
         "uri": "/content/core-packages/language-haskell",
         "title": "Language-Haskell",
         "content": "\nLanguage-Haskell adds syntax highlighting and snippets to Haskell files in Atom.\n\nAuto-indent\n\nIf you don't like current auto-indentation settings, you can define your own regular expression in config.cson (Edit - Open Your Config), or disable it altogether.\n\n{{%notice note%}}\nAtom is using oniguruma for regular expression, and, as such, expressionhas to be a string, not a javascript regexp. You'll also have to escape \\.\n{{%/notice%}}\n\nTo disable auto-indent:\n\n\".haskell.source\":\n  editor:\n    increaseIndentPattern: ''\n\nBy default, increaseIndentPattern has the following value:\n\n\".haskell.source\":\n  editor:\n    increaseIndentPattern: '(((=|\\\\bdo|\\\\bwhere|\\\\bthen|\\\\belse|\\\\bof)\\\\s)|(\\\\bif(?!.\\\\bthen\\\\b.\\\\belse\\\\b.).*))$'\n\n Configuring highlighting\n\n{{%notice tip%}}\nYou may need to reopen currently opened files (or restart Atom) for your new stylesheet to be applied.\n{{%/notice%}}\n\nModule names\n\nlanguage-haskell uses support.other.module.haskell scope for module names, both in import statements and when using qualified identifiers (like Prelude.foldl). Your syntax theme might not support this scope. If you want to highlight module names in this case, you can add the following to your stylesheet (Edit → Stylesheet...):\n\n.syntax--support.syntax--other.syntax--module.syntax--haskell {\n  color: C0A077; //or whatever color you like\n}\n\nOperators and infix function application\n\nlanguage-haskell uses keyword.operator.haskell scope for operators and keyword.operator.infix.haskell for infix function application, e.g.\n\nnegate map [1..10]\n\nNot all syntax themes support these scopes (almost none support keyword.operator.infix particularly)\n\nIf you want to higlight operators and infix function applications you can add the following to your stylesheet (Edit → Stylesheet...):\n\n.syntax--keyword.syntax--operator.syntax--haskell {\n  color: CF8C00; // or whatever color you like\n}\n.syntax--keyword.syntax--operator.syntax--infix.syntax--haskell {\n  color: #CC77AC; // if you want to highlight infix application differently\n}\n\nSpecial Prelude treatment\n\nFor historical and other reasons (see 85 for discussion), Prelude identifiers (functions, types, etc) are treated slightly differently and, depending on your highlighting theme, can be highlighted differently.\n\nScopes that are used:\n\nsupport.function.prelude.haskell for functions and values\nsupport.class.prelude.haskell for types\nentity.other.inherited-class.prelude.haskell for typeclasses\nsupport.tag.prelude.haskell for type constructors\n\nIf you want Prelude identifiers highlighted differently from all the rest, you can define different colors for all or some of those, f.ex. by adding something like this to your stylesheet (Edit → Stylesheet...):\n\n.syntax--support.syntax--function.syntax--prelude.syntax--haskell {\n  color: #56b6c2; // or whatever color you like\n}\n.syntax--support.syntax--tag.syntax--prelude.syntax--haskell {\n  color: #e9969d;\n}\n\nIf you don't want Prelude identifiers highlighted differently, you can override it by adding something like this to your stylesheet (Edit → Stylesheet...):\n\n.syntax--prelude.syntax--haskell {\n  color: inherit;\n}\n",
+        "tags": []
+    },
+    {
+        "uri": "/content/extra-packages/_index",
+        "title": "Extra Packages",
+        "content": "\nChapter III\n\n Extra Packages\n",
         "tags": []
     },
     {
@@ -48,13 +54,7 @@
         "tags": []
     },
     {
-        "uri": "/content/extra-packages/index",
-        "title": "Extra Packages",
-        "content": "\nChapter III\n\n Extra Packages\n",
-        "tags": []
-    },
-    {
-        "uri": "/content/installation/index",
+        "uri": "/content/installation/_index",
         "title": "Installation",
         "content": "\nChapter II\n\n Installation\n",
         "tags": []
@@ -66,15 +66,15 @@
         "tags": []
     },
     {
-        "uri": "/content/overview/features",
-        "title": "Features",
-        "content": "\nSytnax highlighting\n\nGrammars:\n\nHaskell (\\*.hs)\nLiterate Haskell (\\*.lhs)\nCabal (\\*.cabal)\n\n Errors, warnings and lints\n\nAfter saving the current file the check and linter processes will be executed.\nAfter processes are finished, the results can be seen in output panel. You can\nsee different kind of results by switching Errors, Warnings and Lints tab\nbuttons. If you click on message's file name in output panel, Atom will open\nthis file and put cursor near problem that triggered output message.\n\nCheck results can also be seen in left editor gutter (near line numbers) as\nicons. If you hover mouse pointer over such an icon, a tooltip will be shown\nwith problem description. Results are highlighted inside editor as well, so you\ncan easily determine where the problem is.\n\nGet type/info\n\nIf you have haskell-ghc-mod or similar package installed, you can get type of any expression and get info on any symbol.\n\nThere are two options to do so.\n\nFirst one is to hover mouse pointer over any Haskell source in editor, or any\nselection. By default, this will show type for expression/selecton under cursor.\nYou can change this behavior to show info for symbol, or disable it completely\nin IDE-Haskell settings.\n\nAnother option is to use keyboard to get type/info under cursor. No default\nbindings are specified, but you can specify them in your Atom keymap.\n\nSee Configuration for more information.\n\n Autocompletion\n\nYou can show auto-completions for hole _. This will try to find replacements\nbased on type. It's no magic though, so if hole has some crazy type, it won't\nfind anything. You can also refine hole completions based on name by using named holes, e.g. _from\n\nCurrent autocompletion scopes:\n\nImport module name\nImport module symbols\nLanguage pragmas\nOPTIONS_GHC pragma\nType name\nClass name\nSymbol name\n\nAutocompletion:\n\nImport autocompletion:\n\nHole autocompletion:\n\nCode beautify\n\nYou can use stylish-haskell utility to indent pragmas, imports and data type\ndefinitions. Simply select Prettify from Haskel IDE menu to apply\nstylish-haskell to current file.\n\n Build and test project\n\nIf you have ide-haskell-cabal or similar package installed, you can build,\nclean and test your project from ide-haskell (stack and cabal supported)\n",
+        "uri": "/content/overview/_index",
+        "title": "Overview",
+        "content": "\nChapter I\n\n Overview\n\nWelcome to Atom-Haskell project! We aim to bring awesome Haskell support to the amazing Atom editor.\n",
         "tags": []
     },
     {
-        "uri": "/content/overview/index",
-        "title": "Overview",
-        "content": "\nChapter I\n\n Overview\n\nWelcome to Atom-Haskell project! We aim to bring awesome Haskell support to the amazing Atom editor.\n",
+        "uri": "/content/overview/features",
+        "title": "Features",
+        "content": "\nSytnax highlighting\n\nGrammars:\n\nHaskell (\\*.hs)\nLiterate Haskell (\\*.lhs)\nCabal (\\*.cabal)\n\n Errors, warnings and lints\n\nAfter saving the current file the check and linter processes will be executed.\nAfter processes are finished, the results can be seen in output panel. You can\nsee different kind of results by switching Errors, Warnings and Lints tab\nbuttons. If you click on message's file name in output panel, Atom will open\nthis file and put cursor near problem that triggered output message.\n\nCheck results can also be seen in left editor gutter (near line numbers) as\nicons. If you hover mouse pointer over such an icon, a tooltip will be shown\nwith problem description. Results are highlighted inside editor as well, so you\ncan easily determine where the problem is.\n\nGet type/info\n\nIf you have haskell-ghc-mod or similar package installed, you can get type of any expression and get info on any symbol.\n\nThere are two options to do so.\n\nFirst one is to hover mouse pointer over any Haskell source in editor, or any\nselection. By default, this will show type for expression/selecton under cursor.\nYou can change this behavior to show info for symbol, or disable it completely\nin IDE-Haskell settings.\n\nAnother option is to use keyboard to get type/info under cursor. No default\nbindings are specified, but you can specify them in your Atom keymap.\n\nSee Configuration for more information.\n\n Autocompletion\n\nYou can show auto-completions for hole _. This will try to find replacements\nbased on type. It's no magic though, so if hole has some crazy type, it won't\nfind anything. You can also refine hole completions based on name by using named holes, e.g. _from\n\nCurrent autocompletion scopes:\n\nImport module name\nImport module symbols\nLanguage pragmas\nOPTIONS_GHC pragma\nType name\nClass name\nSymbol name\n\nAutocompletion:\n\nImport autocompletion:\n\nHole autocompletion:\n\nCode beautify\n\nYou can use stylish-haskell utility to indent pragmas, imports and data type\ndefinitions. Simply select Prettify from Haskel IDE menu to apply\nstylish-haskell to current file.\n\n Build and test project\n\nIf you have ide-haskell-cabal or similar package installed, you can build,\nclean and test your project from ide-haskell (stack and cabal supported)\n",
         "tags": []
     },
     {
