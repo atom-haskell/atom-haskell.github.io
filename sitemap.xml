@@ -7,6 +7,11 @@
   </url>
   
   <url>
+    <loc>https://atom-haskell.github.io/extra-packages/ide-haskell-repl/</loc>
+    <lastmod>2017-03-28T03:06:41+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://atom-haskell.github.io/installation/</loc>
     <lastmod>2017-03-13T06:17:48+03:00</lastmod>
   </url>

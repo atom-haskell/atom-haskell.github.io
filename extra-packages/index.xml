@@ -10,6 +10,59 @@
     <atom:link href="https://atom-haskell.github.io/extra-packages/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>IDE-Haskell-REPL</title>
+      <link>https://atom-haskell.github.io/extra-packages/ide-haskell-repl/</link>
+      <pubDate>Tue, 28 Mar 2017 03:06:41 +0000</pubDate>
+      
+      <guid>https://atom-haskell.github.io/extra-packages/ide-haskell-repl/</guid>
+      <description>
+
+&lt;p&gt;This package provides a way to interact with &lt;code&gt;ghci&lt;/code&gt; (or, alternatively, &lt;code&gt;cabal repl&lt;/code&gt; or &lt;code&gt;stack ghci&lt;/code&gt;) from Atom.&lt;/p&gt;
+
+&lt;h2 id=&#34;repl-backend-selection&#34;&gt;Repl backend selection&lt;/h2&gt;
+
+&lt;p&gt;ide-haskell-repl will try to automatically select the correct repl backend (&lt;code&gt;stack&lt;/code&gt;/&lt;code&gt;cabal&lt;/code&gt;/&lt;code&gt;ghci&lt;/code&gt;) based on current builder chosen in &lt;code&gt;ide-haskell-cabal&lt;/code&gt;. You can choose &lt;code&gt;none&lt;/code&gt; builder to use &lt;code&gt;ghci&lt;/code&gt; in plain projects (a.k.a. projects with no &lt;code&gt;*.cabal&lt;/code&gt; file).&lt;/p&gt;
+
+&lt;p&gt;If &lt;code&gt;ide-haskell-cabal&lt;/code&gt; is unavailable (e.g. disabled), ide-haskell-repl will fall back to &lt;code&gt;defaultRepl&lt;/code&gt; specified in settings.&lt;/p&gt;
+
+&lt;h2 id=&#34;using-on-windows&#34;&gt;Using on Windows&lt;/h2&gt;
+
+&lt;p&gt;On Windows, interrupting ghci will kill it. There is no good solution to this problem at the moment, but there is a &amp;ldquo;bad&amp;rdquo; solution.&lt;/p&gt;
+
+&lt;p&gt;You need to get &lt;code&gt;ghci-wrapper.exe&lt;/code&gt; executable from &lt;a href=&#34;https://github.com/atom-haskell/win-ghci-wrapper/releases&#34;&gt;https://github.com/atom-haskell/win-ghci-wrapper/releases&lt;/a&gt; (or if you don&amp;rsquo;t trust random binaries you&amp;rsquo;ve downloaded from the Internet, you can build it from source &amp;ndash; you only really need ghc for that)&lt;/p&gt;
+
+&lt;p&gt;Then you need to specify full path to this executable in &lt;code&gt;ghciWrapperPath&lt;/code&gt; setting of this package.&lt;/p&gt;
+
+&lt;p&gt;For example, if you placed &lt;code&gt;ghci-wrapper.exe&lt;/code&gt; in &lt;code&gt;C:\Downloads&lt;/code&gt; directory, you need to put &lt;code&gt;C:\Downloads\ghci-wrapper.exe&lt;/code&gt; in &lt;code&gt;ghciWrapperPath&lt;/code&gt; setting.&lt;/p&gt;
+
+&lt;p&gt;Finally, restart any open REPL sessions.&lt;/p&gt;
+
+&lt;h2 id=&#34;repl-specific-commands&#34;&gt;Repl-specific commands&lt;/h2&gt;
+
+&lt;p&gt;To send command, or move through history, you can use the following commands when focused on repl command editor:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ide-haskell-repl:exec-command&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ide-haskell-repl:history-back&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ide-haskell-repl:history-forward&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ide-haskell-repl:ghci-reload&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note that this commands are bound specifically to repl editor, which has CSS selector of &lt;code&gt;atom-text-editor.ide-haskell-repl&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can rebind those in your keymap, e.g.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cson&#34;&gt;&amp;quot;atom-text-editor.ide-haskell-repl&amp;quot;:
+  &#39;ctrl-enter&#39;: &#39;ide-haskell-repl:exec-command&#39;
+  &#39;ctrl-up&#39;: &#39;ide-haskell-repl:history-back&#39;
+  &#39;ctrl-down&#39;: &#39;ide-haskell-repl:history-forward&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Just don&amp;rsquo;t forget to disable default bindings in ide-haskell-repl settings, if you don&amp;rsquo;t want them.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>IDE-Haskell-Hoogle</title>
       <link>https://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</link>
       <pubDate>Mon, 13 Mar 2017 03:03:47 +0300</pubDate>

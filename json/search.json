@@ -54,6 +54,12 @@
         "tags": []
     },
     {
+        "uri": "/content/extra-packages/ide-haskell-repl",
+        "title": "IDE-Haskell-REPL",
+        "content": "\nThis package provides a way to interact with ghci (or, alternatively, cabal repl or stack ghci) from Atom.\n\nRepl backend selection\n\nide-haskell-repl will try to automatically select the correct repl backend (stack/cabal/ghci) based on current builder chosen in ide-haskell-cabal. You can choose none builder to use ghci in plain projects (a.k.a. projects with no *.cabal file).\n\nIf ide-haskell-cabal is unavailable (e.g. disabled), ide-haskell-repl will fall back to defaultRepl specified in settings.\n\n Using on Windows\n\nOn Windows, interrupting ghci will kill it. There is no good solution to this problem at the moment, but there is a \"bad\" solution.\n\nYou need to get ghci-wrapper.exe executable from https://github.com/atom-haskell/win-ghci-wrapper/releases (or if you don't trust random binaries you've downloaded from the Internet, you can build it from source -- you only really need ghc for that)\n\nThen you need to specify full path to this executable in ghciWrapperPath setting of this package.\n\nFor example, if you placed ghci-wrapper.exe in C:\\Downloads directory, you need to put C:\\Downloads\\ghci-wrapper.exe in ghciWrapperPath setting.\n\nFinally, restart any open REPL sessions.\n\nRepl-specific commands\n\nTo send command, or move through history, you can use the following commands when focused on repl command editor:\n\nide-haskell-repl:exec-command\nide-haskell-repl:history-back\nide-haskell-repl:history-forward\nide-haskell-repl:ghci-reload\n\nNote that this commands are bound specifically to repl editor, which has CSS selector of atom-text-editor.ide-haskell-repl.\n\nYou can rebind those in your keymap, e.g.\n\n\"atom-text-editor.ide-haskell-repl\":\n  'ctrl-enter': 'ide-haskell-repl:exec-command'\n  'ctrl-up': 'ide-haskell-repl:history-back'\n  'ctrl-down': 'ide-haskell-repl:history-forward'\n\nJust don't forget to disable default bindings in ide-haskell-repl settings, if you don't want them.\n",
+        "tags": []
+    },
+    {
         "uri": "/content/installation/_index",
         "title": "Installation",
         "content": "\nChapter II\n\n Installation\n",
