@@ -417,10 +417,15 @@
 <ul>
 <li>
 <ul>
-<li><a href="#setup">Setup</a>
+<li><a href="#choosing-remote-or-local-database">Choosing remote or local database</a></li>
+<li><a href="#setup-for-local-database">Setup for local database</a>
 <ul>
 <li><a href="#install-hoogle">Install <code>hoogle</code></a></li>
-<li><a href="#build-local-hoogle-database">Build local hoogle database</a></li>
+<li><a href="#build-local-hoogle-database">Build local hoogle database</a>
+<ul>
+<li><a href="#hoogle-v4">Hoogle v4</a></li>
+<li><a href="#hoogle-v5">Hoogle v5</a></li>
+</ul></li>
 <li><a href="#point-the-package-to-hoogle-executable">Point the package to <code>hoogle</code> executable</a></li>
 </ul></li>
 </ul></li>
@@ -443,9 +448,20 @@
 
 <p>Install package <code>ide-haskell-hoogle</code>. Refer to <a href="http://flight-manual.atom.io/using-atom/sections/atom-packages/">Atom Flight Manual</a> for details on installing packages.</p>
 
-<p>Package requires <code>hoogle</code> executable, plus you will need to build hoogle database for hoogle itself to work.</p>
+<p>Package supports using either local Hoogle database, or remote one (hosted on <a href="https://haskell.org/hoogle/">https://haskell.org/hoogle/</a> and/or <a href="http://hoogle.haskell.org/">http://hoogle.haskell.org/</a>)</p>
 
-<h2 id="setup">Setup</h2>
+<ul>
+<li><strong>Local database</strong> requires <code>hoogle</code> executable, plus you will need to build hoogle database for hoogle itself to work.</li>
+<li><strong>Remote database</strong> obviously requires connection to the Internet</li>
+</ul>
+
+<h2 id="choosing-remote-or-local-database">Choosing remote or local database</h2>
+
+<p>By default, package uses &ldquo;new&rdquo; remote database from <a href="http://hoogle.haskell.org/">http://hoogle.haskell.org/</a>. You can change that using <strong>Hoogle Type</strong> setting:</p>
+
+<p><img src="images/cc4e58def2da47ddb6c97001202528f6.png" alt="" /></p>
+
+<h2 id="setup-for-local-database">Setup for local database</h2>
 
 <h3 id="install-hoogle">Install <code>hoogle</code></h3>
 
@@ -463,6 +479,26 @@
 
 <h3 id="build-local-hoogle-database">Build local hoogle database</h3>
 
+<p>You can use either hoogle-4 or hoogle-5, either of these versions will work. However, hoogle-5 is recommended.</p>
+
+<p>If not sure what hoogle version you have, run
+<code>hoogle --version</code>.</p>
+
+<p>You should get output similar to this:</p>
+
+<pre><code>$ hoogle --version
+Hoogle 5.0.12, http://hoogle.haskell.org/
+</code></pre>
+
+<p>or</p>
+
+<pre><code>$ hoogle --version
+Hoogle v4.2.43, (C) Neil Mitchell 2004-2012
+http://haskell.org/hoogle
+</code></pre>
+
+<h4 id="hoogle-v4">Hoogle v4</h4>
+
 <p>You have a choice between installing basic database and extended database.</p>
 
 <div class="notices warning" ><p>Installing extended database will take a lot of time and memory!</p>
@@ -478,6 +514,15 @@
 
 <pre><code>hoogle data all
 </code></pre>
+
+<h4 id="hoogle-v5">Hoogle v5</h4>
+
+<p>Run</p>
+
+<pre><code>hoogle generate --download
+</code></pre>
+
+<p>This will get you the database used on <a href="http://haskell.org/hoogle">http://haskell.org/hoogle</a></p>
 
 <h3 id="point-the-package-to-hoogle-executable">Point the package to <code>hoogle</code> executable</h3>
 
