@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.19" />
+    <meta name="description" content="Programming in Haskell using Atom editor">
+
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    
+    <title>Haskell-ghc-mod</title>
+    <link href="http://atom-haskell.github.io//css/nucleus.css" rel="stylesheet">
+    <link href="http://atom-haskell.github.io//css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://atom-haskell.github.io//css/hybrid.css" rel="stylesheet">
+    <link href="http://atom-haskell.github.io//css/featherlight.min.css" rel="stylesheet">
+    <link href="http://atom-haskell.github.io//css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="http://atom-haskell.github.io//css/horsey.css" rel="stylesheet">
+    <link href="http://atom-haskell.github.io//css/theme.css" rel="stylesheet">
+    <link href="http://atom-haskell.github.io//css/hugo-theme.css" rel="stylesheet">
+    <script src="http://atom-haskell.github.io//js/jquery-2.x.min.js"></script>
+    <style type="text/css">:root #header + #content > #left > #rlblock_left
+    {display:none !important;}</style>
+    
+
+  </head>
+  <body class="" data-url="/core-packages/haskell-ghc-mod/">
+    <nav id="sidebar">
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 316 120"
+   version="1.1"
+   style="width: 100%; margin: 0;"
+   >
+  <g
+     style="display:inline"
+     id="layer2">
+    <path
+       id="path8"
+       d="m 94.210782,116.81717 c 10.884408,-5.54588 7.946668,-33.337755 -6.34375,-63.031251"
+       style="fill:none;stroke:#66595c;stroke-width:5;stroke-linecap:round" />
+    <path
+       d="m 128.52329,63.973419 c 0.12239,-2.335348 -0.71341,-4.638794 -2.37555,-6.854295 m -12.43695,20.604295 c 8.99437,-3.489189 14.52504,-8.265012 14.8125,-13.75"
+       style="fill:none;stroke:#66595c;stroke-width:5;stroke-linecap:round"
+       id="path4187" />
+    <g
+       transform="matrix(1.0178476,0,0,0.97945631,-0.65479983,1.9388908)"
+       id="g4158">
+      <path
+         clip-path="none"
+         id="path4160"
+         d="M 30.633359,102.37623 59.992586,58.33789 30.633359,14.299557 l 22.019167,0 58.717444,88.076673 -22.01917,0 -18.348631,-27.523459 -18.349643,27.523459 -22.019167,0 z m 0,0"
+         style="clip-rule:nonzero;display:inline;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <path
+         clip-path="none"
+         id="path4162"
+         d="M 1.2741324,102.37623 30.633359,58.33789 1.2741324,14.299557 l 22.0191666,0 29.359227,44.038333 -29.359227,44.03834 -22.0191666,0 z m 0,0"
+         style="clip-rule:nonzero;display:inline;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <path
+         clip-path="none"
+         id="path4164"
+         d="m 86.905126,54.668367 -9.786747,-14.679107 48.931711,-0.001 0,14.68012 -39.144964,0 z m 0,0"
+         style="clip-rule:nonzero;display:inline;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <path
+         clip-path="none"
+         id="path4166"
+         d="m 101.58423,76.687533 -9.785733,-14.679106 34.251593,-10e-4 0,14.680118 -24.46586,0 z m 0,0"
+         style="clip-rule:nonzero;display:inline;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    </g>
+    <path
+       id="path4"
+       style="fill:none;stroke:#66595c;stroke-width:5;stroke-linecap:round"
+       d="m 103.99204,30.004669 c 2.11268,-10.752718 0.93121,-18.913295 -4.062508,-22.1562504 -1.66457,-1.080985 -3.66023,-1.554019 -5.90625,-1.46875 -12.1285,0.46045 -31.698317,17.1600744 -47.687496,41.7812504 -18.950138,29.180653 -25.684504,58.425451 -15.03125,65.343751 5.056946,3.28402 13.115147,0.95604 22.21875,-5.53125" />
+    <path
+       id="path7261"
+       d="M 57.023286,11.098419 C 50.869411,5.9925276 45.097838,3.2506346 40.460786,3.5984186 c -1.23461,0.0926 -2.376432,0.396859 -3.4375,0.9375 -11.318054,5.7668364 -7.702368,35.5921234 8.09375,66.5937504 15.796118,31.001631 37.775696,51.454341 49.093746,45.687501"
+       style="fill:none;stroke:#66595c;stroke-width:5;stroke-linecap:round" />
+    <path
+       id="path6"
+       d="M 126.14774,57.119124 C 118.78148,47.300473 95.185224,39.20915 66.835782,37.723419 c -3.257457,-0.170716 -6.460584,-0.260544 -9.593746,-0.25 -30.287234,0.101927 -53.9287755,8.410341 -54.5312505,19.90625 -0.286892,5.474225 4.700484,10.782383 13.2500005,15.1875"
+       style="fill:none;stroke:#66595c;stroke-width:5;stroke-linecap:round" />
+    <text x="221.89" y="50.9215" text-anchor="middle" font-size="43.134">
+      ATOM
+    </text>
+    <text x="133" y="104.055" font-size="43.134">
+      HASKELL
+    </text>
+  </g>
+  <style><![CDATA[
+    text{
+        font-family: 'Novacento Sans Wide', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        color: #222;
+        font-weight: 200;
+        line-height: 1em;
+        margin: 0;
+    }
+  ]]></style>
+</svg>
+</a>
+
+    </div>
+    
+</div>
+
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+        
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+      
+      
+      
+      
+
+      
+        
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/overview/">
+        <a href="/overview/">
+          <span>
+            
+              <b>I. </b>
+            
+             Overview
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+          
+          
+          
+            <li class="dd-item " data-nav-id="/overview/implemented-features/">
+              <a href="/overview/implemented-features/">
+                <span>Implemented features     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/overview/requirements/">
+              <a href="/overview/requirements/">
+                <span>Requirements     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/overview/installation/">
+              <a href="/overview/installation/">
+                <span>Installation     </i></span>
+              </a>
+            </li>
+          
+          
+        </ul>
+        
+      </li>
+      
+      
+      
+
+      
+        
+      
+      
+      
+
+      <li class="dd-item  parent" data-nav-id="/core-packages/">
+        <a href="/core-packages/">
+          <span>
+            
+              <b>II. </b>
+            
+             Core Packages
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+          
+          
+          
+            <li class="dd-item " data-nav-id="/core-packages/language-haskell/">
+              <a href="/core-packages/language-haskell/">
+                <span>Language-Haskell     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/core-packages/ide-haskell/">
+              <a href="/core-packages/ide-haskell/">
+                <span>IDE-Haskell     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/core-packages/ide-haskell-cabal/">
+              <a href="/core-packages/ide-haskell-cabal/">
+                <span>IDE-Haskell-Cabal     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item active" data-nav-id="/core-packages/haskell-ghc-mod/">
+              <a href="/core-packages/haskell-ghc-mod/">
+                <span>Haskell-ghc-mod     </i></span>
+              </a>
+            </li>
+          
+          
+          
+            <li class="dd-item " data-nav-id="/core-packages/autocomplete-haskell/">
+              <a href="/core-packages/autocomplete-haskell/">
+                <span>Autocomplete-Haskell     </i></span>
+              </a>
+            </li>
+          
+          
+        </ul>
+        
+      </li>
+      
+      
+      
+
+      
+        
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/extra-packages/">
+        <a href="/extra-packages/">
+          <span>
+            
+              <b>III. </b>
+            
+             Extra Packages
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+          
+          
+          
+            <li class="dd-item " data-nav-id="/extra-packages/ide-haskell-hoogle/">
+              <a href="/extra-packages/ide-haskell-hoogle/">
+                <span>IDE-Haskell-Hoogle     </i></span>
+              </a>
+            </li>
+          
+          
+        </ul>
+        
+      </li>
+      
+      
+    </ul>
+    <hr>
+     
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fa fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+        <section id="body">
+        <div id="overlay"></div>
+
+        <div class="padding highlightable">
+
+            <div id="top-bar">
+              
+                
+                
+                
+              <div id="top-github-link">
+                  <a class="github-link" href="https://github.com/atom-haskell/atom-haskell-docs/edit/master/content/core-packages/haskell-ghc-mod.md" target="blank">
+                    <i class="fa fa-code-fork"></i>
+                    Edit this page
+                  </a>
+              </div>
+                
+              
+              <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                  <span id="sidebar-toggle-span">
+                      <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                  </span>
+                
+                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
+                
+                
+                
+                
+                  
+                    
+                    
+                <a href="/core-packages/" itemprop="url"><span itemprop="title">Core Packages</span></a> <i class="fa fa-angle-right"></i>
+                    
+                  
+                
+                  
+                
+                  
+                
+                <span itemprop="title"> Haskell-ghc-mod</span>
+              </div>
+              
+                  <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#keybindings">Keybindings</a></li>
+<li><a href="#advanced-configuration">Advanced configuration</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+              
+
+            </div>
+            
+    	        <div id="body-inner">
+                
+                <h1>Haskell-ghc-mod</h1>
+                
+
+
+
+<p>Haskell ghc-mod opens pipe to <code>ghc-mod</code> and queries types, info, typechecks and lints current file.</p>
+
+<div class="notices warning" ><p>When using with stack, see <a href="https://github.com/atom-haskell/haskell-ghc-mod/wiki/Using-with-stack">https://github.com/atom-haskell/haskell-ghc-mod/wiki/Using-with-stack</a></p>
+</div>
+
+
+<h2 id="configuration">Configuration</h2>
+
+<p>Only configuration option you will likely need to set is <code>ghcModPath</code>. It needs to be set to full path to <code>ghc-mod</code> executable, if it is not in your PATH. For example, if you have <code>ghc-mod</code> in <code>/home/user/.cabal/bin/</code>, you need to write <code>/home/user/.cabal/bin/ghc-mod</code> in <code>ghcModPath</code>. Note that shell expansions are <em>not</em> suported, i.e. you can&rsquo;t use <code>~</code> or <code>$HOME</code>.</p>
+
+<p>You may also consider adding path to directory containing ghc/ghci executable to
+<code>additionalPathDirectories</code> configuration option. It is a comma-separated list
+of directories that will be added to your search path when invoking ghc-mod.
+For example, if you have <code>ghc</code> installed to <code>/usr/local</code>, then you would add
+<code>/usr/local/bin</code> to <code>additionalPathDirectories</code>.</p>
+
+<h2 id="keybindings">Keybindings</h2>
+
+<p>Haskell-ghc-mod comes with little pre-specified keybindings, so you will need to specify your own, if you want those.</p>
+
+<p>You can edit Atom keybindings by opening &lsquo;Edit → Open Your Keymap&rsquo;. Here is a template for all commands, provided by haskell-ghc-mod:</p>
+
+<pre><code class="language-cson">'atom-text-editor[data-grammar~=&quot;haskell&quot;]':
+  '': 'haskell-ghc-mod:check-file'
+  '': 'haskell-ghc-mod:lint-file'
+  'ctrl-alt-t': 'haskell-ghc-mod:show-type' #this is an example binding
+  'ctrl-alt-i': 'haskell-ghc-mod:show-info' #this is an example binding
+  'ctrl-alt-T': 'haskell-ghc-mod:insert-type' #this is an example binding
+  '': 'haskell-ghc-mod:case-split'
+  '': 'haskell-ghc-mod:sig-fill'
+  '': 'haskell-ghc-mod:show-info-fallback-to-type'
+  '': 'haskell-ghc-mod:show-type-fallback-to-info'
+  '': 'haskell-ghc-mod:show-type-and-info'
+  '': 'haskell-ghc-mod:insert-import'
+  '': 'haskell-ghc-mod:go-to-declaration'
+
+'atom-workspace':
+  '': 'haskell-ghc-mod:shutdown-backend'
+</code></pre>
+
+<h2 id="advanced-configuration">Advanced configuration</h2>
+
+<p>In some cases, it could be useful to disable ghc-mod completely for a given project (e.g. GHCJS), or suppress error pop-ups (e.g. in case of known ghc-mod bugs where some features don&rsquo;t work, or don&rsquo;t always work).</p>
+
+<p>You can create <code>.haskell-ghc-mod.json</code> file in project root (i.e. directory containing a <code>*.cabal</code> file, or &ndash; in case of plain projects &ndash; Atom&rsquo;s project root directory).</p>
+
+<p><code>.haskell-ghc-mod.json</code> from Atom project root will also be honored, if it exists, with lower priority.</p>
+
+<p>You can also create a global config file in <code>${ATOM_CONFIG_DIR}/haskell-ghc-mod.json</code>. <code>${ATOM_CONFIG_DIR}</code> is usually <code>${HOME}/.atom</code>, but you can check it&rsquo;s path by running <code>atom.getConfigDirPath()</code> in Atom&rsquo;s developer console (View → Developer → Toggle Developer Tools → Console).</p>
+
+<p>Config file is a JSON file with the following fields:</p>
+
+<ul>
+<li><code>&quot;disable&quot;</code> &ndash; <code>true</code>/<code>false</code>. Will disable all ghc-mod functions entirely. If omitted, defaults to <code>false</code>.</li>
+<li><code>&quot;suppressErrors&quot;</code> &ndash; <code>true</code>/<code>false</code>. Will suppress error pop-ups. Those still will be displayed in Atom&rsquo;s console (View → Developer → Toggle Developer Tools), so if someting seems wierd, one could check there.</li>
+<li><code>&quot;ghcOptions&quot;</code> &ndash; Array of Strings. Options to pass to GHC. Can be useful to explicitly suppress warnings, e.g. <code>-fno-warn-unused-do-bind</code> or anything else.</li>
+<li><code>&quot;ghcModOptions&quot;</code> &ndash; Array of Strings. Arbitrary options to pass to ghc-mod. Bear in mind that you shouldn&rsquo;t <em>really</em> change most ghc-mod options, since the package makes some assumptions on that part. Also only global ghc-mod options will work (i.e. no command-specific ones)</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code class="language-json">{
+  &quot;disable&quot;: false,
+  &quot;suppressErrors&quot;: true,
+  &quot;ghcOptions&quot;: [&quot;-fno-warn-unused-do-bind&quot;, &quot;-fno-warn-name-shadowing&quot;],
+  &quot;ghcModOptions&quot;: [&quot;--with-ghc&quot;, &quot;/path/to/custom/ghc&quot;]
+}
+</code></pre>
+
+
+      
+      </div>
+    </div>
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="http://atom-haskell.github.io//js/clipboard.min.js"></script>
+    <script src="http://atom-haskell.github.io//js/perfect-scrollbar.min.js"></script>
+    <script src="http://atom-haskell.github.io//js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="http://atom-haskell.github.io//js/jquery.sticky-kit.min.js"></script>
+    <script src="http://atom-haskell.github.io//js/featherlight.min.js"></script>
+    <script src="http://atom-haskell.github.io//js/html5shiv-printshiv.min.js"></script>
+    <script src="http://atom-haskell.github.io//js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="http://atom-haskell.github.io//js/modernizr.custom.71422.js"></script>
+    <script src="http://atom-haskell.github.io//js/learn.js"></script>
+    <script src="http://atom-haskell.github.io//js/hugo-learn.js"></script>
+    
+
+  </body>
+</html>
+

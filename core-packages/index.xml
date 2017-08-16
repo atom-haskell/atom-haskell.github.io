@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Core-packages on Atom-Haskell</title>
+    <link>http://atom-haskell.github.io/core-packages/index.xml</link>
+    <description>Recent content in Core-packages on Atom-Haskell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Mar 2017 00:04:29 +0300</lastBuildDate>
+    <atom:link href="http://atom-haskell.github.io/core-packages/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Core Packages</title>
+      <link>http://atom-haskell.github.io/core-packages/</link>
+      <pubDate>Mon, 13 Mar 2017 00:04:29 +0300</pubDate>
+      
+      <guid>http://atom-haskell.github.io/core-packages/</guid>
+      <description>
+
+&lt;h3 id=&#34;chapter-ii&#34;&gt;Chapter II&lt;/h3&gt;
+
+&lt;h1 id=&#34;packages&#34;&gt;Packages&lt;/h1&gt;
+
+&lt;p&gt;A detailed overview of Atom-Haskell packages.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Language-Haskell</title>
+      <link>http://atom-haskell.github.io/core-packages/language-haskell/</link>
+      <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
+      
+      <guid>http://atom-haskell.github.io/core-packages/language-haskell/</guid>
+      <description>
+
+&lt;p&gt;Language-Haskell adds syntax highlighting and snippets to Haskell files in Atom.&lt;/p&gt;
+
+&lt;h2 id=&#34;auto-indent&#34;&gt;Auto-indent&lt;/h2&gt;
+
+&lt;p&gt;If you don&amp;rsquo;t like current auto-indentation settings, you can define your own regular expression in &lt;code&gt;config.cson&lt;/code&gt; (&lt;strong&gt;Edit -&amp;gt; Open Your Config&lt;/strong&gt;), or disable it altogether.&lt;/p&gt;
+
+&lt;div class=&#34;notices note&#34; &gt;&lt;p&gt;Atom is using oniguruma for regular expression, and, as such, expressionhas to be a string, not a javascript regexp. You&amp;rsquo;ll also have to escape &lt;code&gt;\&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;To disable auto-indent:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cson&#34;&gt;&amp;quot;.haskell.source&amp;quot;:
+  editor:
+    increaseIndentPattern: &#39;&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;By default, &lt;code&gt;increaseIndentPattern&lt;/code&gt; has the following value:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cson&#34;&gt;&amp;quot;.haskell.source&amp;quot;:
+  editor:
+    increaseIndentPattern: &#39;(((=|\\bdo|\\bwhere|\\bthen|\\belse|\\bof)\\s*)|(\\bif(?!.*\\bthen\\b.*\\belse\\b.*).*))$&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;configuring-highlighting&#34;&gt;Configuring highlighting&lt;/h2&gt;
+
+&lt;div class=&#34;notices tip&#34; &gt;&lt;p&gt;You may need to reopen currently opened files (or restart Atom) for your new stylesheet to be applied.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;h3 id=&#34;module-names&#34;&gt;Module names&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;language-haskell&lt;/code&gt; uses &lt;code&gt;support.other.module.haskell&lt;/code&gt; scope for module names, both in &lt;code&gt;import&lt;/code&gt; statements and when using qualified identifiers (like &lt;code&gt;Prelude.foldl&lt;/code&gt;). Your syntax theme might not support this scope. If you want to highlight module names in this case, you can add the following to your stylesheet (Edit → Stylesheet&amp;hellip;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-less&#34;&gt;.syntax--support.syntax--other.syntax--module.syntax--haskell {
+  color: #C0A077; //or whatever color you like
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;operators-and-infix-function-application&#34;&gt;Operators and infix function application&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;language-haskell&lt;/code&gt; uses &lt;code&gt;keyword.operator.haskell&lt;/code&gt; scope for operators and &lt;code&gt;keyword.operator.infix.haskell&lt;/code&gt; for infix function application, e.g.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-haskell&#34;&gt;negate `map` [1..10]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Not all syntax themes support these scopes (almost none support &lt;code&gt;keyword.operator.infix&lt;/code&gt; particularly)&lt;/p&gt;
+
+&lt;p&gt;If you want to higlight operators and infix function applications you can add the following to your stylesheet (Edit → Stylesheet&amp;hellip;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-less&#34;&gt;.syntax--keyword.syntax--operator.syntax--haskell {
+  color: #CF8C00; // or whatever color you like
+}
+.syntax--keyword.syntax--operator.syntax--infix.syntax--haskell {
+  color: #CC77AC; // if you want to highlight infix application differently
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;special-prelude-treatment&#34;&gt;Special &lt;code&gt;Prelude&lt;/code&gt; treatment&lt;/h3&gt;
+
+&lt;p&gt;For historical and other reasons (see &lt;a href=&#34;https://github.com/atom-haskell/language-haskell/issues/85&#34;&gt;#85&lt;/a&gt; for discussion), &lt;code&gt;Prelude&lt;/code&gt; identifiers (functions, types, etc) are treated slightly differently and, depending on your highlighting theme, can be highlighted differently.&lt;/p&gt;
+
+&lt;p&gt;Scopes that are used:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;support.function.prelude.haskell&lt;/code&gt; for functions and values&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;support.class.prelude.haskell&lt;/code&gt; for types&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;entity.other.inherited-class.prelude.haskell&lt;/code&gt; for typeclasses&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;support.tag.prelude.haskell&lt;/code&gt; for type constructors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you want &lt;code&gt;Prelude&lt;/code&gt; identifiers highlighted differently from all the rest, you can define different colors for all or some of those, f.ex. by adding something like this to your stylesheet (&lt;strong&gt;Edit → Stylesheet&amp;hellip;&lt;/strong&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-less&#34;&gt;.syntax--support.syntax--function.syntax--prelude.syntax--haskell {
+  color: #56b6c2; // or whatever color you like
+}
+.syntax--support.syntax--tag.syntax--prelude.syntax--haskell {
+  color: #e9969d;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you &lt;em&gt;don&amp;rsquo;t&lt;/em&gt; want &lt;code&gt;Prelude&lt;/code&gt; identifiers highlighted differently, you can override it by adding something like this to your stylesheet (&lt;strong&gt;Edit → Stylesheet&amp;hellip;&lt;/strong&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-less&#34;&gt;.syntax--prelude.syntax--haskell {
+  color: inherit;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IDE-Haskell</title>
+      <link>http://atom-haskell.github.io/core-packages/ide-haskell/</link>
+      <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
+      
+      <guid>http://atom-haskell.github.io/core-packages/ide-haskell/</guid>
+      <description>
+
+&lt;p&gt;IDE-Haskell Atom package provides basic capabilities, as well as a backend for other Atom-Haskell packages to use.&lt;/p&gt;
+
+&lt;h2 id=&#34;known-conflicts&#34;&gt;Known conflicts&lt;/h2&gt;
+
+&lt;p&gt;This package relies on grammar defined by &lt;code&gt;language-haskell&lt;/code&gt;. Any other Haskell grammar packages (such as &lt;code&gt;haskell-grammar&lt;/code&gt;) may conflict with it.&lt;/p&gt;
+
+&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
+
+&lt;p&gt;Package is fully configurable via &lt;strong&gt;Edit → Preferences → Packages → ide-haskell
+→ Settings&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You will likely need to specify full path to &lt;code&gt;stylish-haskell&lt;/code&gt;, if it is not in
+your &lt;code&gt;PATH&lt;/code&gt;, at the very least.&lt;/p&gt;
+
+&lt;p&gt;You might also want to look into configuring haskell-ghc-mod (&lt;a href=&#34;https://github.com/atom-haskell/haskell-ghc-mod#haskell-ghc-mod-atom-package&#34;&gt;haskell-ghc-mod README&lt;/a&gt;) and ide-haskell-cabal (&lt;a href=&#34;https://github.com/atom-haskell/ide-haskell-cabal#ide-haskell-cabal-package&#34;&gt;ide-haskell-cabal README&lt;/a&gt;)&lt;/p&gt;
+
+&lt;div class=&#34;notices note&#34; &gt;&lt;p&gt;Since version 1.0.0, some configuration options have been moved to
+backends, in particular, haskell-ghc-mod. Migration should be automatic, but
+please check if your configuration is correct just in case.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;h3 id=&#34;keyboard-shortcuts&#34;&gt;Keyboard shortcuts&lt;/h3&gt;
+
+&lt;div class=&#34;notices note&#34; &gt;&lt;p&gt;Since version 1.0.0, most commands are provided by
+backends, in particular, haskell-ghc-mod and ide-haskell-cabal. Please revise
+your keymap accordingly.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Refer to (&lt;a href=&#34;https://github.com/atom-haskell/haskell-ghc-mod#haskell-ghc-mod-atom-package&#34;&gt;haskell-ghc-mod README&lt;/a&gt;) and (&lt;a href=&#34;https://github.com/atom-haskell/ide-haskell-cabal#ide-haskell-cabal-package&#34;&gt;ide-haskell-cabal README&lt;/a&gt;) for details&lt;/p&gt;
+
+&lt;p&gt;Ide-Haskell comes with little pre-specified keybindings, so you will need to specify your own, if you want those.&lt;/p&gt;
+
+&lt;p&gt;You can edit Atom keybindings by opening &amp;lsquo;Edit → Open Your Keymap&amp;rsquo;. Here is a template for all commands, provided by ide-haskell:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cson&#34;&gt;&#39;atom-text-editor[data-grammar~=&amp;quot;haskell&amp;quot;]&#39;:
+  &#39;escape&#39;: &#39;ide-haskell:close-tooltip&#39; #this is set by default
+  &#39;&#39;:&#39;ide-haskell:prettify-file&#39;
+  &#39;&#39;:&#39;ide-haskell:next-error&#39;
+  &#39;&#39;:&#39;ide-haskell:prev-error&#39;
+
+&#39;atom-text-editor[data-grammar~=&amp;quot;cabal&amp;quot;]&#39;:
+  &#39;&#39;: &#39;ide-haskell:prettify-file&#39;
+
+&#39;atom-workspace&#39;:
+  &#39;&#39;: &#39;ide-haskell:toggle-output&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;changing-output-panel-look&#34;&gt;Changing output panel look&lt;/h3&gt;
+
+&lt;p&gt;Changing output panel look can be achieved with Atom stylesheets. You can open your stylesheet with Edit → Stylesheet&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Syntax is &lt;a href=&#34;http://lesscss.org/&#34;&gt;Less&lt;/a&gt;. You can use the following selectors:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ide-haskell-panel&lt;/code&gt; &amp;ndash; whole panel&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ide-haskell-panel-heading&lt;/code&gt; &amp;ndash; panel heading (control elements)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ide-hashell-panel-items&lt;/code&gt; &amp;ndash; output area&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ide-haskell-item-position&lt;/code&gt; &amp;ndash; file/line/column of individual message&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ide-haskell-item-description&lt;/code&gt; &amp;ndash; message itself&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please note, that to change font face in &lt;code&gt;ide-haskell-item-description&lt;/code&gt;, you need to target it specifically, or use &lt;code&gt;!important&lt;/code&gt; specifier.&lt;/p&gt;
+
+&lt;p&gt;For example, to change font size in whole panel:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-less&#34;&gt;ide-haskell-panel {
+  font-size: 18pt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or only in output area:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-less&#34;&gt;ide-haskell-panel-items {
+  font-size: 18pt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To change font face in panel heading:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-less&#34;&gt;ide-haskell-panel-heading {
+  font-family: &amp;quot;Comic Sans MS&amp;quot;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To change font face in messages themselves:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-less&#34;&gt;ide-haskell-item-description {
+  font-family: &amp;quot;Fira Mono&amp;quot;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You are free to write any CSS, of course. Bear in mind, however, that any selectors not listed above are subject to sudden change.&lt;/p&gt;
+
+&lt;h3 id=&#34;using-atom-linter-https-atom-io-packages-linter-for-output&#34;&gt;Using &lt;a href=&#34;https://atom.io/packages/linter&#34;&gt;atom-linter&lt;/a&gt; for output&lt;/h3&gt;
+
+&lt;p&gt;You can use linter package for displaying some messages. Install linter package, and then change &lt;code&gt;messageDisplayFrontend&lt;/code&gt; in ide-haskell settings to &lt;code&gt;linter&lt;/code&gt;. Restart Atom.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IDE-Haskell-Cabal</title>
+      <link>http://atom-haskell.github.io/core-packages/ide-haskell-cabal/</link>
+      <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
+      
+      <guid>http://atom-haskell.github.io/core-packages/ide-haskell-cabal/</guid>
+      <description>
+
+&lt;p&gt;The &lt;code&gt;ide-haskell-cabal&lt;/code&gt; package provides a build backend for &lt;code&gt;ide-haskell&lt;/code&gt;
+package based on &lt;code&gt;cabal&lt;/code&gt; or &lt;code&gt;stack&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;It supports easy switching between multiple versions of GHC by having a set of configuration settings for each version of GHC, plus a drop-down box to pick a GHC version. For each GHC version you can specify:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The path (either adding to your system path or replacing it completely)&lt;/li&gt;
+&lt;li&gt;The sandbox file (cabal &lt;code&gt;CABAL_SANDBOX_CONFIG&lt;/code&gt; environment variable)&lt;/li&gt;
+&lt;li&gt;The build directory (cabal &lt;code&gt;--builddir&lt;/code&gt; parameter). This defaults to &lt;code&gt;dist/&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It also provides support for &lt;code&gt;ide-haskell&lt;/code&gt;&amp;rsquo;s build target selection by reading and parsing the &lt;code&gt;.cabal&lt;/code&gt; file and extracting the available targets (it uses a thin &lt;code&gt;ghcjs&lt;/code&gt;-compiled wrapper around the &lt;code&gt;Cabal&lt;/code&gt; library to read the &lt;code&gt;.cabal&lt;/code&gt; file).&lt;/p&gt;
+
+&lt;h2 id=&#34;keybindings&#34;&gt;Keybindings&lt;/h2&gt;
+
+&lt;p&gt;Ide-Haskell-Cabal comes with little pre-specified keybindings, so you will need to specify your own, if you want those.&lt;/p&gt;
+
+&lt;p&gt;You can edit Atom keybindings by opening &lt;strong&gt;Edit → Keymap&amp;hellip;&lt;/strong&gt;. Here is a template for all commands, provided by ide-haskell-cabal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cson&#34;&gt;&#39;atom-workspace&#39;:
+  &#39;&#39;: &#39;ide-haskell-cabal:build&#39;
+  &#39;&#39;: &#39;ide-haskell-cabal:set-build-target&#39;
+  &#39;&#39;: &#39;ide-haskell-cabal:clean&#39;
+  &#39;&#39;: &#39;ide-haskell-cabal:test&#39;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Haskell-ghc-mod</title>
+      <link>http://atom-haskell.github.io/core-packages/haskell-ghc-mod/</link>
+      <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
+      
+      <guid>http://atom-haskell.github.io/core-packages/haskell-ghc-mod/</guid>
+      <description>
+
+&lt;p&gt;Haskell ghc-mod opens pipe to &lt;code&gt;ghc-mod&lt;/code&gt; and queries types, info, typechecks and lints current file.&lt;/p&gt;
+
+&lt;div class=&#34;notices warning&#34; &gt;&lt;p&gt;When using with stack, see &lt;a href=&#34;https://github.com/atom-haskell/haskell-ghc-mod/wiki/Using-with-stack&#34;&gt;https://github.com/atom-haskell/haskell-ghc-mod/wiki/Using-with-stack&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
+
+&lt;p&gt;Only configuration option you will likely need to set is &lt;code&gt;ghcModPath&lt;/code&gt;. It needs to be set to full path to &lt;code&gt;ghc-mod&lt;/code&gt; executable, if it is not in your PATH. For example, if you have &lt;code&gt;ghc-mod&lt;/code&gt; in &lt;code&gt;/home/user/.cabal/bin/&lt;/code&gt;, you need to write &lt;code&gt;/home/user/.cabal/bin/ghc-mod&lt;/code&gt; in &lt;code&gt;ghcModPath&lt;/code&gt;. Note that shell expansions are &lt;em&gt;not&lt;/em&gt; suported, i.e. you can&amp;rsquo;t use &lt;code&gt;~&lt;/code&gt; or &lt;code&gt;$HOME&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You may also consider adding path to directory containing ghc/ghci executable to
+&lt;code&gt;additionalPathDirectories&lt;/code&gt; configuration option. It is a comma-separated list
+of directories that will be added to your search path when invoking ghc-mod.
+For example, if you have &lt;code&gt;ghc&lt;/code&gt; installed to &lt;code&gt;/usr/local&lt;/code&gt;, then you would add
+&lt;code&gt;/usr/local/bin&lt;/code&gt; to &lt;code&gt;additionalPathDirectories&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;keybindings&#34;&gt;Keybindings&lt;/h2&gt;
+
+&lt;p&gt;Haskell-ghc-mod comes with little pre-specified keybindings, so you will need to specify your own, if you want those.&lt;/p&gt;
+
+&lt;p&gt;You can edit Atom keybindings by opening &amp;lsquo;Edit → Open Your Keymap&amp;rsquo;. Here is a template for all commands, provided by haskell-ghc-mod:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cson&#34;&gt;&#39;atom-text-editor[data-grammar~=&amp;quot;haskell&amp;quot;]&#39;:
+  &#39;&#39;: &#39;haskell-ghc-mod:check-file&#39;
+  &#39;&#39;: &#39;haskell-ghc-mod:lint-file&#39;
+  &#39;ctrl-alt-t&#39;: &#39;haskell-ghc-mod:show-type&#39; #this is an example binding
+  &#39;ctrl-alt-i&#39;: &#39;haskell-ghc-mod:show-info&#39; #this is an example binding
+  &#39;ctrl-alt-T&#39;: &#39;haskell-ghc-mod:insert-type&#39; #this is an example binding
+  &#39;&#39;: &#39;haskell-ghc-mod:case-split&#39;
+  &#39;&#39;: &#39;haskell-ghc-mod:sig-fill&#39;
+  &#39;&#39;: &#39;haskell-ghc-mod:show-info-fallback-to-type&#39;
+  &#39;&#39;: &#39;haskell-ghc-mod:show-type-fallback-to-info&#39;
+  &#39;&#39;: &#39;haskell-ghc-mod:show-type-and-info&#39;
+  &#39;&#39;: &#39;haskell-ghc-mod:insert-import&#39;
+  &#39;&#39;: &#39;haskell-ghc-mod:go-to-declaration&#39;
+
+&#39;atom-workspace&#39;:
+  &#39;&#39;: &#39;haskell-ghc-mod:shutdown-backend&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;advanced-configuration&#34;&gt;Advanced configuration&lt;/h2&gt;
+
+&lt;p&gt;In some cases, it could be useful to disable ghc-mod completely for a given project (e.g. GHCJS), or suppress error pop-ups (e.g. in case of known ghc-mod bugs where some features don&amp;rsquo;t work, or don&amp;rsquo;t always work).&lt;/p&gt;
+
+&lt;p&gt;You can create &lt;code&gt;.haskell-ghc-mod.json&lt;/code&gt; file in project root (i.e. directory containing a &lt;code&gt;*.cabal&lt;/code&gt; file, or &amp;ndash; in case of plain projects &amp;ndash; Atom&amp;rsquo;s project root directory).&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;.haskell-ghc-mod.json&lt;/code&gt; from Atom project root will also be honored, if it exists, with lower priority.&lt;/p&gt;
+
+&lt;p&gt;You can also create a global config file in &lt;code&gt;${ATOM_CONFIG_DIR}/haskell-ghc-mod.json&lt;/code&gt;. &lt;code&gt;${ATOM_CONFIG_DIR}&lt;/code&gt; is usually &lt;code&gt;${HOME}/.atom&lt;/code&gt;, but you can check it&amp;rsquo;s path by running &lt;code&gt;atom.getConfigDirPath()&lt;/code&gt; in Atom&amp;rsquo;s developer console (View → Developer → Toggle Developer Tools → Console).&lt;/p&gt;
+
+&lt;p&gt;Config file is a JSON file with the following fields:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;disable&amp;quot;&lt;/code&gt; &amp;ndash; &lt;code&gt;true&lt;/code&gt;/&lt;code&gt;false&lt;/code&gt;. Will disable all ghc-mod functions entirely. If omitted, defaults to &lt;code&gt;false&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;suppressErrors&amp;quot;&lt;/code&gt; &amp;ndash; &lt;code&gt;true&lt;/code&gt;/&lt;code&gt;false&lt;/code&gt;. Will suppress error pop-ups. Those still will be displayed in Atom&amp;rsquo;s console (View → Developer → Toggle Developer Tools), so if someting seems wierd, one could check there.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;ghcOptions&amp;quot;&lt;/code&gt; &amp;ndash; Array of Strings. Options to pass to GHC. Can be useful to explicitly suppress warnings, e.g. &lt;code&gt;-fno-warn-unused-do-bind&lt;/code&gt; or anything else.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;ghcModOptions&amp;quot;&lt;/code&gt; &amp;ndash; Array of Strings. Arbitrary options to pass to ghc-mod. Bear in mind that you shouldn&amp;rsquo;t &lt;em&gt;really&lt;/em&gt; change most ghc-mod options, since the package makes some assumptions on that part. Also only global ghc-mod options will work (i.e. no command-specific ones)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;disable&amp;quot;: false,
+  &amp;quot;suppressErrors&amp;quot;: true,
+  &amp;quot;ghcOptions&amp;quot;: [&amp;quot;-fno-warn-unused-do-bind&amp;quot;, &amp;quot;-fno-warn-name-shadowing&amp;quot;],
+  &amp;quot;ghcModOptions&amp;quot;: [&amp;quot;--with-ghc&amp;quot;, &amp;quot;/path/to/custom/ghc&amp;quot;]
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Autocomplete-Haskell</title>
+      <link>http://atom-haskell.github.io/core-packages/autocomplete-haskell/</link>
+      <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
+      
+      <guid>http://atom-haskell.github.io/core-packages/autocomplete-haskell/</guid>
+      <description>&lt;p&gt;Autocomplete-haskell provides autocompletion facilities for your Haskell
+hacking.
+It relies on scope names provided by &lt;code&gt;language-haskell&lt;/code&gt; and &lt;code&gt;haskell-completion-backend&lt;/code&gt; service, provided by &lt;code&gt;haskell-ghc-mod&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You can show auto-completions for hole &lt;code&gt;_&lt;/code&gt;. This will try to find replacements
+based on type. It&amp;rsquo;s no magic though, so if hole has some crazy type, it won&amp;rsquo;t
+find anything. You can also refine hole completions based on name by using named holes, e.g. &lt;code&gt;_from&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Sadly, it does not pick up types and/or other symbols defined in current file
+(ghc-mod seems to be incapable of this feat), so for this you have to rely on
+default autocomplete-plus SymbolProvider.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

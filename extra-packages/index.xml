@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Extra-packages on Atom-Haskell</title>
+    <link>http://atom-haskell.github.io/extra-packages/index.xml</link>
+    <description>Recent content in Extra-packages on Atom-Haskell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Mar 2017 03:02:30 +0300</lastBuildDate>
+    <atom:link href="http://atom-haskell.github.io/extra-packages/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Extra Packages</title>
+      <link>http://atom-haskell.github.io/extra-packages/</link>
+      <pubDate>Mon, 13 Mar 2017 03:02:30 +0300</pubDate>
+      
+      <guid>http://atom-haskell.github.io/extra-packages/</guid>
+      <description>
+
+&lt;h3 id=&#34;chapter-iii&#34;&gt;Chapter III&lt;/h3&gt;
+
+&lt;h1 id=&#34;extra-packages&#34;&gt;Extra Packages&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IDE-Haskell-Hoogle</title>
+      <link>http://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</link>
+      <pubDate>Mon, 13 Mar 2017 03:03:47 +0300</pubDate>
+      
+      <guid>http://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</guid>
+      <description>
+
+&lt;p&gt;Install package &lt;code&gt;ide-haskell-hoogle&lt;/code&gt;. Refer to &lt;a href=&#34;http://flight-manual.atom.io/using-atom/sections/atom-packages/&#34;&gt;Atom Flight Manual&lt;/a&gt; for details on installing packages.&lt;/p&gt;
+
+&lt;p&gt;Package requires &lt;code&gt;hoogle&lt;/code&gt; executable, plus you will need to build hoogle database for hoogle itself to work.&lt;/p&gt;
+
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+
+&lt;h3 id=&#34;install-hoogle&#34;&gt;Install &lt;code&gt;hoogle&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;You can use &lt;code&gt;cabal&lt;/code&gt;, &lt;code&gt;stack&lt;/code&gt;, or your favorite package manager.&lt;/p&gt;
+
+&lt;p&gt;Cabal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cabal install hoogle
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Stack:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;stack install hoogle
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;build-local-hoogle-database&#34;&gt;Build local hoogle database&lt;/h3&gt;
+
+&lt;p&gt;You have a choice between installing basic database and extended database.&lt;/p&gt;
+
+&lt;div class=&#34;notices warning&#34; &gt;&lt;p&gt;Installing extended database will take a lot of time and memory!&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;To install basic database, run&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hoogle data
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To install extended database, run&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hoogle data all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;point-the-package-to-hoogle-executable&#34;&gt;Point the package to &lt;code&gt;hoogle&lt;/code&gt; executable&lt;/h3&gt;
+
+&lt;div class=&#34;notices info&#34; &gt;&lt;p&gt;You don&amp;rsquo;t need to do this if &lt;code&gt;hoogle&lt;/code&gt; is in &lt;code&gt;PATH&lt;/code&gt;, i.e. if you can type &lt;code&gt;hoogle&lt;/code&gt; in the terminal, and won&amp;rsquo;t get &amp;lsquo;File not found&amp;rsquo; error.&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Open Atom&amp;rsquo;s settings, Packages, find ide-haskell-hoogle, then set &lt;strong&gt;Hoogle Path&lt;/strong&gt; to full path to &lt;code&gt;hoogle&lt;/code&gt; executable. For example, if your &lt;code&gt;hoogle&lt;/code&gt; executable is located in &lt;code&gt;/home/user/.local/bin/&lt;/code&gt; directory, put &lt;code&gt;/home/user/.local/bin/hoogle&lt;/code&gt; into &lt;strong&gt;Hoogle Path&lt;/strong&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
