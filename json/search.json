@@ -2,7 +2,7 @@
     {
         "uri": "/content/_index",
         "title": "Atom-Haskell documentation",
-        "content": "\nWelcome to Atom-Haskell documentation site.\n\nInformation collected on these pages should help you get started with Haskell in Atom editor.\n\nAt the moment, this site mostly only collects information from various Atom-Haskell project READMEs. Proper documentation/tutorials are work-in-progress.\n\nClick one of the links on the left to start reading.\n\nIRC Chat\n\nYou can join atom-haskell on FreeNode, and devs can usually be found there. Bear in mind that if someone's on the channel, it doesn't necessarily mean they aren't AFK.\n\nIf you're not familiar with IRC, you can use FreeNode's webchat\n",
+        "content": "\nWelcome to Atom-Haskell documentation site.\n\nInformation collected on these pages should help you get started with Haskell in Atom editor.\n\nAt the moment, this site mostly only collects information from various Atom-Haskell project READMEs. Proper documentation/tutorials are work-in-progress.\n\nClick one of the links on the left to start reading.\n\nIRC Chat\n\nYou can join atom-haskell on FreeNode, and devs can usually be found there. Bear in mind that if someone's on the channel, it doesn't necessarily mean they aren't AFK.\n\nIf you're not familiar with IRC, you can use FreeNode's webchat\n\nGitter Chat\n\nWe also have a Gitter chat room on https://gitter.im/atom-haskell/ide-haskell\n",
         "tags": []
     },
     {
