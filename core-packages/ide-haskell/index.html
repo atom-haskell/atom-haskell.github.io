@@ -423,6 +423,7 @@
 <li><a href="#keyboard-shortcuts">Keyboard shortcuts</a></li>
 <li><a href="#changing-output-panel-look">Changing output panel look</a></li>
 <li><a href="#using-atom-linter-https-atom-io-packages-linter-for-output">Using <a href="https://atom.io/packages/linter">atom-linter</a> for output</a></li>
+<li><a href="#advanced-configuration-since-v2-2-0">Advanced configuration (since v2.2.0)</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -455,7 +456,7 @@
 
 <p>You will likely need to specify full path to prettifier executable, at the very least.</p>
 
-<p>You might also want to look into configuring haskell-ghc-mod (<a href="https://github.com/atom-haskell/haskell-ghc-mod#haskell-ghc-mod-atom-package">haskell-ghc-mod README</a>) and ide-haskell-cabal (<a href="https://github.com/atom-haskell/ide-haskell-cabal#ide-haskell-cabal-package">ide-haskell-cabal README</a>)</p>
+<p>You might also want to look into <a href="/core-packages/haskell-ghc-mod">configuring haskell-ghc-mod</a> and <a href="/core-packages/ide-haskell-cabal">ide-haskell-cabal</a></p>
 
 <div class="notices note" ><p>Since version 1.0.0, some configuration options have been moved to
 backends, in particular, haskell-ghc-mod. Migration should be automatic, but
@@ -471,23 +472,22 @@ your keymap accordingly.</p>
 </div>
 
 
-<p>Refer to (<a href="https://github.com/atom-haskell/haskell-ghc-mod#haskell-ghc-mod-atom-package">haskell-ghc-mod README</a>) and (<a href="https://github.com/atom-haskell/ide-haskell-cabal#ide-haskell-cabal-package">ide-haskell-cabal README</a>) for details</p>
+<p>Refer to sections on <a href="/core-packages/haskell-ghc-mod#keybindings">haskell-ghc-mod</a> and <a href="/core-packages/ide-haskell-cabal#keybindings">ide-haskell-cabal</a> for details</p>
 
 <p>Ide-Haskell comes with little pre-specified keybindings, so you will need to specify your own, if you want those.</p>
 
 <p>You can edit Atom keybindings by opening &lsquo;Edit → Open Your Keymap&rsquo;. Here is a template for all commands, provided by ide-haskell:</p>
 
-<pre><code class="language-cson">'atom-text-editor[data-grammar~=&quot;haskell&quot;]':
+<pre><code class="language-cson">'atom-text-editor.ide-haskell--has-tooltips':
   'escape': 'ide-haskell:close-tooltip' #this is set by default
-  '':'ide-haskell:prettify-file'
-  '':'ide-haskell:next-error'
-  '':'ide-haskell:prev-error'
 
-'atom-text-editor[data-grammar~=&quot;cabal&quot;]':
-  '': 'ide-haskell:prettify-file'
+'atom-text-editor.ide-haskell':
+  '':'ide-haskell:prettify-file'
 
 'atom-workspace':
   '': 'ide-haskell:toggle-output'
+  '': 'ide-haskell:next-error'
+  '': 'ide-haskell:prev-error'
 </code></pre>
 
 <h3 id="changing-output-panel-look">Changing output panel look</h3>
@@ -539,6 +539,58 @@ your keymap accordingly.</p>
 <h3 id="using-atom-linter-https-atom-io-packages-linter-for-output">Using <a href="https://atom.io/packages/linter">atom-linter</a> for output</h3>
 
 <p>You can use linter package for displaying some messages. Install linter package, and then change <code>messageDisplayFrontend</code> in ide-haskell settings to <code>linter</code>. Restart Atom.</p>
+
+<h3 id="advanced-configuration-since-v2-2-0">Advanced configuration (since v2.2.0)</h3>
+
+<p>Some <code>ide-haskell</code> settings are root scope-sensitive, meaning they can have different values defined in config depending on editor grammar.</p>
+
+<p>Atom Flight Manual gives a brief introduction into scoped settings <a href="http://flight-manual.atom.io/behind-atom/sections/scoped-settings-scopes-and-scope-descriptors/">here</a>, but here&rsquo;s a short refresher.</p>
+
+<p>You can define setting overrides in your config file (<strong>Edit → Config&hellip;</strong>) under specific scope selectors. For example, imagine this is your config:</p>
+
+<pre><code class="language-cson">&quot;*&quot;:
+  &quot;ide-haskell&quot;:
+    stylishHaskellPath: &quot;stylish-haskell&quot;
+</code></pre>
+
+<p>Now, consider you would like to use <code>hindent</code>, but only for Literate Haskell files (since <code>stylish-haskell</code> doesn&rsquo;t support <code>lhs</code>). You can do that by extending your config like so:</p>
+
+<pre><code class="language-cson">&quot;*&quot;:
+  &quot;ide-haskell&quot;:
+    stylishHaskellPath: &quot;stylish-haskell&quot;
+&quot;.text.tex.latex.haskell&quot;:
+  &quot;ide-haskell&quot;:
+    stylishHaskellPath: &quot;hindent&quot;
+</code></pre>
+
+<p>You can learn scope name for a given grammar by opening a file using that grammar and running <code>editor:log-cursor-scope</code> command. The first (topmost) entry in the message would be the root scope, the rest are syntax scopes.</p>
+
+<p>Bear in mind ide-haskell isn&rsquo;t sensitive to syntax scopes (since it&rsquo;s either overly complicated to support or doesn&rsquo;t make much sense).</p>
+
+<p>Here&rsquo;s a list of settings that are sensitive to root scope:</p>
+
+<ul>
+<li><code>onSavePrettify</code></li>
+<li><code>onSavePrettifyFormats</code>
+
+<ul>
+<li><code>source*c2hs</code></li>
+<li><code>source*cabal</code></li>
+<li><code>source*hsc2hs</code></li>
+<li><code>source*haskell</code></li>
+<li><code>text*tex*latex*haskell</code></li>
+<li><code>source*hsig</code></li>
+</ul></li>
+<li><code>expressionTypeInterval</code></li>
+<li><code>onCursorMove</code></li>
+<li><code>stylishHaskellPath</code></li>
+<li><code>stylishHaskellArguments</code></li>
+<li><code>cabalPath</code></li>
+</ul>
+
+<div class="notices warning" ><p>This list can be incomplete.</p>
+</div>
+
 
 
       
