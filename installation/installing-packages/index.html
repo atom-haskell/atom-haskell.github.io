@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Language-Haskell</title>
+    <title>Installing packages</title>
     <link href="https://atom-haskell.github.io//css/nucleus.css" rel="stylesheet">
     <link href="https://atom-haskell.github.io//css/font-awesome.min.css" rel="stylesheet">
     <link href="https://atom-haskell.github.io//css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     
 
   </head>
-  <body class="" data-url="/core-packages/language-haskell/">
+  <body class="" data-url="/installation/installing-packages/">
     
     <nav id="sidebar">
   <div id="header-wrapper">
@@ -219,7 +219,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/installation/">
+      <li class="dd-item  parent" data-nav-id="/installation/">
         <a href="/installation/">
           <span>
             
@@ -232,7 +232,7 @@
         
         <ul>
           
-            <li class="dd-item " data-nav-id="/installation/installing-packages/">
+            <li class="dd-item active" data-nav-id="/installation/installing-packages/">
               <a href="/installation/installing-packages/">
                 <span>Installing packages     </i></span>
               </a>
@@ -261,7 +261,7 @@
       
       
 
-      <li class="dd-item  parent" data-nav-id="/core-packages/">
+      <li class="dd-item  " data-nav-id="/core-packages/">
         <a href="/core-packages/">
           <span>
             
@@ -274,7 +274,7 @@
         
         <ul>
           
-            <li class="dd-item active" data-nav-id="/core-packages/language-haskell/">
+            <li class="dd-item " data-nav-id="/core-packages/language-haskell/">
               <a href="/core-packages/language-haskell/">
                 <span>Language-Haskell     </i></span>
               </a>
@@ -388,7 +388,7 @@
                 
                 
               <div id="top-github-link">
-                  <a class="github-link" href="https://github.com/atom-haskell/atom-haskell-docs/edit/master/content/core-packages/language-haskell.md" target="blank">
+                  <a class="github-link" href="https://github.com/atom-haskell/atom-haskell-docs/edit/master/content/installation/installing-packages.md" target="blank">
                     <i class="fa fa-code-fork"></i>
                     Edit this page
                   </a>
@@ -410,11 +410,11 @@
                   
                     
                     
-                <a href="/core-packages/" itemprop="url"><span itemprop="title">Core Packages</span></a> <i class="fa fa-angle-right"></i>
+                <a href="/installation/" itemprop="url"><span itemprop="title">Installation</span></a> <i class="fa fa-angle-right"></i>
                     
                   
                 
-                <span itemprop="title"> Language-Haskell</span>
+                <span itemprop="title"> Installing packages</span>
               </div>
               
                   <div class="progress">
@@ -423,13 +423,8 @@
 <ul>
 <li>
 <ul>
-<li><a href="#auto-indent">Auto-indent</a></li>
-<li><a href="#configuring-highlighting">Configuring highlighting</a>
-<ul>
-<li><a href="#module-names">Module names</a></li>
-<li><a href="#operators-and-infix-function-application">Operators and infix function application</a></li>
-<li><a href="#special-prelude-treatment">Special <code>Prelude</code> treatment</a></li>
-</ul></li>
+<li><a href="#pick-and-choose-approach">Pick-and-choose approach</a></li>
+<li><a href="#whole-bundle-approach">Whole bundle approach</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -443,98 +438,43 @@
             
               <div id="body-inner">
                 
-                <h1>Language-Haskell</h1>
+                <h1>Installing packages</h1>
                 
 
 
 
-<p>Language-Haskell adds syntax highlighting and snippets to Haskell files in Atom.</p>
-
-<h2 id="auto-indent">Auto-indent</h2>
-
-<p>If you don&rsquo;t like current auto-indentation settings, you can define your own regular expression in <code>config.cson</code> (<strong>Edit -&gt; Open Your Config</strong>), or disable it altogether.</p>
-
-<div class="notices note" ><p>Atom is using oniguruma for regular expression, and, as such, expressionhas to be a string, not a javascript regexp. You&rsquo;ll also have to escape <code>\</code>.</p>
+<div class="notices info" ><p>Refer to <a href="http://flight-manual.atom.io/using-atom/sections/atom-packages/">Atom Flight Manual section on packages</a> for more detailed information</p>
 </div>
 
 
-<p>To disable auto-indent:</p>
-
-<pre><code class="language-cson">&quot;.haskell.source&quot;:
-  editor:
-    increaseIndentPattern: ''
-</code></pre>
-
-<p>By default, <code>increaseIndentPattern</code> has the following value:</p>
-
-<pre><code class="language-cson">&quot;.haskell.source&quot;:
-  editor:
-    increaseIndentPattern: '(((=|\\bdo|\\bwhere|\\bthen|\\belse|\\bof)\\s*)|(\\bif(?!.*\\bthen\\b.*\\belse\\b.*).*))$'
-</code></pre>
-
-<h2 id="configuring-highlighting">Configuring highlighting</h2>
-
-<div class="notices tip" ><p>You may need to reopen currently opened files (or restart Atom) for your new stylesheet to be applied.</p>
+<div class="notices tip" ><p>You can find a complete list of Atom-Haskell packages on <a href="https://atom.io/users/atom-haskell/packages">atom.io package registry</a></p>
 </div>
 
 
-<h3 id="module-names">Module names</h3>
+<div class="notices warning" ><p>There are binary dependencies which are not touched upon in this section. Refer to next section for a guide.</p>
+</div>
 
-<p><code>language-haskell</code> uses <code>support.other.module.haskell</code> scope for module names, both in <code>import</code> statements and when using qualified identifiers (like <code>Prelude.foldl</code>). Your syntax theme might not support this scope. If you want to highlight module names in this case, you can add the following to your stylesheet (Edit → Stylesheet&hellip;):</p>
 
-<pre><code class="language-less">.syntax--support.syntax--other.syntax--module.syntax--haskell {
-  color: #C0A077; //or whatever color you like
-}
+<h2 id="pick-and-choose-approach">Pick-and-choose approach</h2>
+
+<p>You can pick and choose what packages you want and do not want to install. However, bear in mind that <code>language-haskell</code> is <em>absolutely mandatory</em>, and <code>ide-haskell</code> is most likely required too.</p>
+
+<p>Most people would want at least core Atom-Haskell packages, which can be installed with a simple <code>apm</code> (Atom Package Manager) command. From terminal, run:</p>
+
+<pre><code class="language-bash">apm install language-haskell ide-haskell ide-haskell-cabal haskell-ghc-mod autocomplete-haskell
 </code></pre>
 
-<h3 id="operators-and-infix-function-application">Operators and infix function application</h3>
+<p>You can install other packages on case-by-case basis.</p>
 
-<p><code>language-haskell</code> uses <code>keyword.operator.haskell</code> scope for operators and <code>keyword.operator.infix.haskell</code> for infix function application, e.g.</p>
+<h2 id="whole-bundle-approach">Whole bundle approach</h2>
 
-<pre><code class="language-haskell">negate `map` [1..10]
-</code></pre>
+<p>There&rsquo;s a community bundle that automatically installs most Atom-Haskell packages and a few extras.</p>
 
-<p>Not all syntax themes support these scopes (almost none support <code>keyword.operator.infix</code> particularly)</p>
+<p>You can find it at <a href="https://atom.io/packages/atom-haskell">https://atom.io/packages/atom-haskell</a></p>
 
-<p>If you want to higlight operators and infix function applications you can add the following to your stylesheet (Edit → Stylesheet&hellip;):</p>
-
-<pre><code class="language-less">.syntax--keyword.syntax--operator.syntax--haskell {
-  color: #CF8C00; // or whatever color you like
-}
-.syntax--keyword.syntax--operator.syntax--infix.syntax--haskell {
-  color: #CC77AC; // if you want to highlight infix application differently
-}
-</code></pre>
-
-<h3 id="special-prelude-treatment">Special <code>Prelude</code> treatment</h3>
-
-<p>For historical and other reasons (see <a href="https://github.com/atom-haskell/language-haskell/issues/85">#85</a> for discussion), <code>Prelude</code> identifiers (functions, types, etc) are treated slightly differently and, depending on your highlighting theme, can be highlighted differently.</p>
-
-<p>Scopes that are used:</p>
-
-<ul>
-<li><code>support.function.prelude.haskell</code> for functions and values</li>
-<li><code>support.class.prelude.haskell</code> for types</li>
-<li><code>entity.other.inherited-class.prelude.haskell</code> for typeclasses</li>
-<li><code>support.tag.prelude.haskell</code> for type constructors</li>
-</ul>
-
-<p>If you want <code>Prelude</code> identifiers highlighted differently from all the rest, you can define different colors for all or some of those, f.ex. by adding something like this to your stylesheet (<strong>Edit → Stylesheet&hellip;</strong>):</p>
-
-<pre><code class="language-less">.syntax--support.syntax--function.syntax--prelude.syntax--haskell {
-  color: #56b6c2; // or whatever color you like
-}
-.syntax--support.syntax--tag.syntax--prelude.syntax--haskell {
-  color: #e9969d;
-}
-</code></pre>
-
-<p>If you <em>don&rsquo;t</em> want <code>Prelude</code> identifiers highlighted differently, you can override it by adding something like this to your stylesheet (<strong>Edit → Stylesheet&hellip;</strong>):</p>
-
-<pre><code class="language-less">.syntax--prelude.syntax--haskell {
-  color: inherit;
-}
-</code></pre>
+<p><div class="notices info" ><p>Since this is a community package, it is not directly supported by Atom-Haskell.</p>
+</div>
+</p>
 
 
       
@@ -615,22 +555,22 @@
           
         
           
-        
+            
+              
+                <a class="nav nav-prev" href="/installation/"> <i class="fa fa-chevron-left"></i></a>
+              
+            
+            
+              
+                <a class="nav nav-next" href="/installation/installing-binary-dependencies/" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+              
+            
           
         
           
         
           
-            
-              
-                <a class="nav nav-prev" href="/core-packages/"> <i class="fa fa-chevron-left"></i></a>
-              
-            
-            
-              
-                <a class="nav nav-next" href="/core-packages/ide-haskell/" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
-              
-            
+        
           
         
           

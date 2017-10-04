@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>Installing packages</title>
+      <link>https://atom-haskell.github.io/installation/installing-packages/</link>
+      <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
+      
+      <guid>https://atom-haskell.github.io/installation/installing-packages/</guid>
+      <description>Refer to Atom Flight Manual section on packages for more detailed information
+ You can find a complete list of Atom-Haskell packages on atom.io package registry
+ There are binary dependencies which are not touched upon in this section. Refer to next section for a guide.
+ Pick-and-choose approach You can pick and choose what packages you want and do not want to install. However, bear in mind that language-haskell is absolutely mandatory, and ide-haskell is most likely required too.</description>
+    </item>
+    
+    <item>
       <title>Language-Haskell</title>
       <link>https://atom-haskell.github.io/core-packages/language-haskell/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
@@ -77,7 +89,7 @@ You will likely need to specify full path to prettifier executable, at the very 
       <description>Supported ghc-mod versions are 5.6. and up.
  These instructions assume you want to use stylish-haskell as a prettifier. If you would like to use hindent or brittany instead, substitute that in place of stylish-haskell below.
 Bear in mind that prettifier has to be able to work as a unix filter, i.e. accept input on STDIN and return output on STDOUT.
- With stack The most reliable way to build these executable binaries is to use stack install.</description>
+ The Atom-Haskell packages (and this instructions) assume that you have at least a minimal Haskell toolchain installed on your system.</description>
     </item>
     
     <item>
@@ -97,8 +109,8 @@ It supports easy switching between multiple versions of GHC by having a set of c
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
       <guid>https://atom-haskell.github.io/overview/requirements/</guid>
-      <description>The Atom-Haskell packages assume that you have a minimal Haskell toolchain installed on your system. You can install this toolchain by following the instructions here:
- Minimal Haskell installers  Core Atom-Haskell packages  language-haskell &amp;ndash; Syntax highlighting and Haskell autodetection ABSOLUTELY REQUIRED! ide-haskell &amp;ndash; GUI and minimal utilities ABSOLUTELY REQUIRED! ide-haskell-cabal &amp;ndash; Build Haskell projects with either cabal or stack. Reports errors/warnings on build. haskell-ghc-mod &amp;ndash; ghc-mod integration. Typecheck and lint sources without building, query type information and more.</description>
+      <description>The Atom-Haskell packages assume that you have at least a minimal Haskell toolchain installed on your system. See https://www.haskell.org/downloads for your options.
+Core Atom-Haskell packages  language-haskell &amp;ndash; Syntax highlighting and Haskell autodetection ABSOLUTELY REQUIRED! ide-haskell &amp;ndash; GUI and minimal utilities ABSOLUTELY REQUIRED! ide-haskell-cabal &amp;ndash; Build Haskell projects with either cabal or stack. Reports errors/warnings on build. haskell-ghc-mod &amp;ndash; ghc-mod integration. Typecheck and lint sources without building, query type information and more.</description>
     </item>
     
     <item>

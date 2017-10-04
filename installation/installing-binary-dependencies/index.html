@@ -232,6 +232,12 @@
         
         <ul>
           
+            <li class="dd-item " data-nav-id="/installation/installing-packages/">
+              <a href="/installation/installing-packages/">
+                <span>Installing packages     </i></span>
+              </a>
+            </li>
+          
             <li class="dd-item active" data-nav-id="/installation/installing-binary-dependencies/">
               <a href="/installation/installing-binary-dependencies/">
                 <span>Installing binary dependencies     </i></span>
@@ -450,13 +456,24 @@ accept input on STDIN and return output on STDOUT.</p>
 </div>
 
 
+<div class="notices warning" ><p>The Atom-Haskell packages (and this instructions) assume that you have at least a minimal Haskell toolchain installed on your system. See <a href="https://www.haskell.org/downloads">https://www.haskell.org/downloads</a> for your options.</p>
+</div>
+
+
+<div class="notices info" ><p>This guide only touches on installing prettifier (like <code>stylish-haskell</code>) and <code>ghc-mod</code> (which you need for all the &ldquo;good stuff&rdquo;, like type tooltips and autocompletion). Extra packages, however, can have other binary dependencies. Installation procedure is rather similar, so no detailed guide is provided. Refer to <a href="/overview/requirements#binary-dependencies">requirements list</a> for more information.</p>
+</div>
+
+
 <h2 id="with-stack">With <code>stack</code></h2>
 
-<p>The most reliable way to build these executable binaries is to use
-<code>stack install</code>.</p>
+<div class="notices warning" ><p>See also <a href="/core-packages/haskell-ghc-mod#using-with-stack">section on using haskell-ghc-mod with stack</a></p>
+</div>
 
-<p>Run the following commands from a command line terminal after you finish
-installing the minimal Haskell toolchain:</p>
+
+<p>Probably a simpler way to start with is to build binary dependencies with
+<code>stack</code>. Refer to <a href="https://docs.haskellstack.org/">stack documentation</a> to get more information about it.</p>
+
+<p>Run the following commands from a command line terminal after you get yourself a minimal Haskell toolchain (either via Haskell Platform, or with <code>stack setup</code>):</p>
 
 <pre><code class="language-bash">$ stack install stylish-haskell
 ...
@@ -496,6 +513,10 @@ get an error that reads something like this:</p>
 if your <code>STACK_INSTALL_PATH</code> were <code>/home/johndoe/.local/bin/</code> then the
 absolute path to the executable would be
 <code>/home/johndoe/.local/bin/executable</code>.</p>
+
+<div class="notices warning" ><p>A notable exception is <code>haskell-ghc-mod</code> package. Avoid setting &lsquo;Ghc Mod Path&rsquo; to anything but <code>ghc-mod</code> (i.e. plain executable name) if at all possible. Instead, add the <em>directory</em> containing <code>ghc-mod</code> executable to &lsquo;Additional Path Directories&rsquo;, so, using the example above, add <code>/home/johndoe/.local/bin</code> to &lsquo;Additional Path Directories&rsquo;.</p>
+</div>
+
 
 <h2 id="with-cabal">With <code>cabal</code></h2>
 
@@ -539,14 +560,22 @@ absolute path to the executable would be
 <pre><code class="language-bash">cabal install ghc-mod stylish-haskell
 </code></pre>
 
-<p>Now you have ghc-mod and stylish-haskell installed. Binary files are in <code>$HOME/ghc-mod-sandbox/bin</code>. You can add this path to <code>PATH</code>, or put full path to <strong>executables</strong> in relevant <code>ide-haskell</code> and <code>haskell-ghc-mod</code> settings.</p>
+<p>Now you have ghc-mod and stylish-haskell installed. Binary files are in <code>$HOME/ghc-mod-sandbox/bin</code>. You can add this path to <code>PATH</code>, or put full path to <strong>executables</strong> in relevant <code>ide-haskell</code> settings and full path to <strong>directory</strong> in <code>haskell-ghc-mod</code> &lsquo;Additional Path Directories&rsquo;.</p>
 
 <p>For example, assuming your <code>HOME</code> is <code>/home/user</code>:</p>
 
 <ul>
 <li>In ide-haskell settings, set &lsquo;Stylish Haskell Path&rsquo; to <code>/home/user/ghc-mod-sandbox/bin/stylish-haskell</code></li>
-<li>In haskell-ghc-mod settings, set &lsquo;Ghc Mod Path&rsquo; to <code>/home/user/ghc-mod-sandbox/bin/ghc-mod</code></li>
+<li>In haskell-ghc-mod settings, set &lsquo;Additional Path Directories&rsquo; to <code>/home/user/ghc-mod-sandbox/bin</code></li>
 </ul>
+
+<div class="notices warning" ><p>Avoid setting &lsquo;Ghc Mod Path&rsquo; in <code>haskell-ghc-mod</code> settings to anything but <code>ghc-mod</code> (i.e. plain executable name) if at all possible. Instead, use &lsquo;Additional Path Directories&rsquo;.</p>
+</div>
+
+
+<div class="notices tip" ><p>&lsquo;Cabal Sandbox&rsquo; option will make <code>haskell-ghc-mod</code> look for <code>ghc-mod</code> executable in the current project&rsquo;s Cabal sandbox first, so <em>if</em> using Cabal sandboxes, you can install ghc-mod per-project.</p>
+</div>
+
 
 <div class="notices warning" ><p>Don&rsquo;t forget to replace <code>$HOME</code> with actual path to home directory! Atom doesn&rsquo;t expand shell variables in package settings.</p>
 </div>
@@ -595,6 +624,8 @@ in the terminal to get actual paths to all executables, if not sure what those s
       
         
       
+        
+      
     
       
         
@@ -635,9 +666,11 @@ in the terminal to get actual paths to all executables, if not sure what those s
           
         
           
+        
+          
             
               
-                <a class="nav nav-prev" href="/installation/"> <i class="fa fa-chevron-left"></i></a>
+                <a class="nav nav-prev" href="/installation/installing-packages/"> <i class="fa fa-chevron-left"></i></a>
               
             
             

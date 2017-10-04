@@ -27,8 +27,8 @@
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
       
       <guid>https://atom-haskell.github.io/overview/requirements/</guid>
-      <description>The Atom-Haskell packages assume that you have a minimal Haskell toolchain installed on your system. You can install this toolchain by following the instructions here:
- Minimal Haskell installers  Core Atom-Haskell packages  language-haskell &amp;ndash; Syntax highlighting and Haskell autodetection ABSOLUTELY REQUIRED! ide-haskell &amp;ndash; GUI and minimal utilities ABSOLUTELY REQUIRED! ide-haskell-cabal &amp;ndash; Build Haskell projects with either cabal or stack. Reports errors/warnings on build. haskell-ghc-mod &amp;ndash; ghc-mod integration. Typecheck and lint sources without building, query type information and more.</description>
+      <description>The Atom-Haskell packages assume that you have at least a minimal Haskell toolchain installed on your system. See https://www.haskell.org/downloads for your options.
+Core Atom-Haskell packages  language-haskell &amp;ndash; Syntax highlighting and Haskell autodetection ABSOLUTELY REQUIRED! ide-haskell &amp;ndash; GUI and minimal utilities ABSOLUTELY REQUIRED! ide-haskell-cabal &amp;ndash; Build Haskell projects with either cabal or stack. Reports errors/warnings on build. haskell-ghc-mod &amp;ndash; ghc-mod integration. Typecheck and lint sources without building, query type information and more.</description>
     </item>
     
   </channel>
