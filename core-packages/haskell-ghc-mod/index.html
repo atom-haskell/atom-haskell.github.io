@@ -459,13 +459,17 @@
 
 <h2 id="configuration">Configuration</h2>
 
-<p>Only configuration option you will likely need to set is <code>ghcModPath</code>. It needs to be set to full path to <code>ghc-mod</code> executable, if it is not in your PATH. For example, if you have <code>ghc-mod</code> in <code>/home/user/.cabal/bin/</code>, you need to write <code>/home/user/.cabal/bin/ghc-mod</code> in <code>ghcModPath</code>. Note that shell expansions are <em>not</em> suported, i.e. you can&rsquo;t use <code>~</code> or <code>$HOME</code>.</p>
+<p>Only configuration option you will likely need to set is <code>additionalPathDirectories</code>. It needs to be set to full path to the <em>directory</em> containing <code>ghc-mod</code> executable, if it is not in your PATH.</p>
+
+<p>For example, if you have <code>ghc-mod</code> in <code>/home/user/.cabal/bin/</code>, you need to write <code>/home/user/.cabal/bin</code> in <code>additionalPathDirectories</code>. Note that shell expansions are <em>not</em> suported, i.e. you can&rsquo;t use <code>~</code> or <code>$HOME</code>.</p>
+
+<div class="notices warning" ><p>You really shouldn&rsquo;t touch <code>ghcModPath</code> setting, unless you know <em>precisely</em> what you&rsquo;re doing. If you specify full path there, Atom won&rsquo;t be able to grab ghc-mod from stack or cabal sandbox!</p>
+</div>
+
 
 <p>You may also consider adding path to directory containing ghc/ghci executable to
-<code>additionalPathDirectories</code> configuration option. It is a comma-separated list
-of directories that will be added to your search path when invoking ghc-mod.
-For example, if you have <code>ghc</code> installed to <code>/usr/local</code>, then you would add
-<code>/usr/local/bin</code> to <code>additionalPathDirectories</code>.</p>
+<code>additionalPathDirectories</code>. The list is comma-separated.
+For example, if you have <code>ghc</code> executable installed to <code>/usr/local/bin</code>, then you could extend add <code>additionalPathDirectories</code> to be <code>/home/user/.cabal/bin,/usr/local/bin</code>.</p>
 
 <h2 id="keybindings">Keybindings</h2>
 
