@@ -425,6 +425,7 @@
 <ul>
 <li><a href="#with-stack">With <code>stack</code></a></li>
 <li><a href="#with-cabal">With <code>cabal</code></a></li>
+<li><a href="#with-nix">With <code>Nix</code></a></li>
 </ul></li>
 </ul>
 </nav>
@@ -588,6 +589,24 @@ absolute path to the executable would be
 in the terminal to get actual paths to all executables, if not sure what those should look like.</p>
 </div>
 
+
+<h2 id="with-nix">With <code>Nix</code></h2>
+
+<p>On <a href="https://nixos.org/">NixOS</a>, or with <a href="https://nixos.org/nix/manual/">Nix package manager</a>, Haskell binaries are available in the
+<a href="https://nixos.org/nixpkgs/manual/#users-guide-to-the-haskell-infrastructure">haskellPackages</a>
+attribute set.</p>
+
+<div class="notices info" ><p>You can query the list of all available Haskell packages with:
+<code>nix-env -f &quot;&lt;nixpkgs&gt;&quot; -qaP -A haskellPackages</code></p>
+</div>
+
+
+<p>Install <code>ghc-mod</code> and <code>stylish-haskell</code>.</p>
+
+<pre><code class="language-bash">nix-env -f &quot;&lt;nixpkgs&gt;&quot; -iA haskellPackages.ghc-mod haskellPackages.stylish-haskell
+</code></pre>
+
+<p>You should now have <code>ghc-mod</code> and <code>stylish-haskell</code> available in your profile.</p>
 
 
       
