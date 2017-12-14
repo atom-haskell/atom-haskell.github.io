@@ -6,7 +6,7 @@
     <description>Recent content in Atom-Haskell documentation on Atom-Haskell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Mar 2017 23:57:42 +0300</lastBuildDate>
+    <lastBuildDate>Mon, 13 Mar 2017 00:05:13 +0300</lastBuildDate>
     
 	<atom:link href="https://atom-haskell.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -59,16 +59,6 @@ Package supports using either local Hoogle database, or remote one (hosted on ht
     </item>
     
     <item>
-      <title>Features</title>
-      <link>https://atom-haskell.github.io/overview/features/</link>
-      <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
-      
-      <guid>https://atom-haskell.github.io/overview/features/</guid>
-      <description>Sytnax highlighting Grammars:
- Haskell (*.hs) Literate Haskell (*.lhs) Cabal (*.cabal)  Errors, warnings and lints After saving the current file the check and linter processes will be executed. After processes are finished, the results can be seen in output panel. You can see different kind of results by switching Errors, Warnings and Lints tab buttons. If you click on message&amp;rsquo;s file name in output panel, Atom will open this file and put cursor near problem that triggered output message.</description>
-    </item>
-    
-    <item>
       <title>IDE-Haskell</title>
       <link>https://atom-haskell.github.io/core-packages/ide-haskell/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
@@ -93,6 +83,16 @@ Bear in mind that prettifier has to be able to work as a unix filter, i.e. accep
     </item>
     
     <item>
+      <title>Features</title>
+      <link>https://atom-haskell.github.io/overview/features/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://atom-haskell.github.io/overview/features/</guid>
+      <description>Sytnax highlighting Grammars:
+ Haskell (*.hs) Literate Haskell (*.lhs) Cabal (*.cabal)  Errors, warnings and lints After saving the current file the check and linter processes will be executed. After processes are finished, the results can be seen in output panel. You can see different kind of results by switching Errors, Warnings and Lints tab buttons. If you click on message&amp;rsquo;s file name in output panel, Atom will open this file and put cursor near problem that triggered output message.</description>
+    </item>
+    
+    <item>
       <title>IDE-Haskell-Cabal</title>
       <link>https://atom-haskell.github.io/core-packages/ide-haskell-cabal/</link>
       <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
@@ -106,7 +106,7 @@ It supports easy switching between multiple versions of GHC by having a set of c
     <item>
       <title>Requirements</title>
       <link>https://atom-haskell.github.io/overview/requirements/</link>
-      <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://atom-haskell.github.io/overview/requirements/</guid>
       <description>The Atom-Haskell packages assume that you have at least a minimal Haskell toolchain installed on your system. See https://www.haskell.org/downloads for your options.

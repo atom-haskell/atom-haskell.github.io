@@ -13,23 +13,17 @@
   </url>
   
   <url>
+    <loc>https://atom-haskell.github.io/overview/</loc>
+  </url>
+  
+  <url>
     <loc>https://atom-haskell.github.io/extra-packages/ide-haskell-repl/</loc>
     <lastmod>2017-03-28T03:06:41+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/installation/</loc>
-    <lastmod>2017-03-13T06:17:48+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</loc>
     <lastmod>2017-03-13T03:03:47+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://atom-haskell.github.io/overview/features/</loc>
-    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
   </url>
   
   <url>
@@ -44,7 +38,16 @@
   
   <url>
     <loc>https://atom-haskell.github.io/</loc>
-    <lastmod>2017-03-12T23:57:42+03:00</lastmod>
+    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://atom-haskell.github.io/overview/features/</loc>
+  </url>
+  
+  <url>
+    <loc>https://atom-haskell.github.io/installation/</loc>
+    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
   </url>
   
   <url>
@@ -53,18 +56,12 @@
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/overview/requirements/</loc>
+    <loc>https://atom-haskell.github.io/core-packages/</loc>
     <lastmod>2017-03-13T00:05:13+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/core-packages/</loc>
-    <lastmod>2017-03-13T00:04:29+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://atom-haskell.github.io/extra-packages/</loc>
-    <lastmod>2017-03-13T03:02:30+03:00</lastmod>
+    <loc>https://atom-haskell.github.io/overview/requirements/</loc>
   </url>
   
   <url>
@@ -73,13 +70,13 @@
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/core-packages/autocomplete-haskell/</loc>
-    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
+    <loc>https://atom-haskell.github.io/extra-packages/</loc>
+    <lastmod>2017-03-28T03:06:41+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/overview/</loc>
-    <lastmod>2017-03-12T23:52:44+03:00</lastmod>
+    <loc>https://atom-haskell.github.io/core-packages/autocomplete-haskell/</loc>
+    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
   </url>
   
   <url>
