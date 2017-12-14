@@ -6,7 +6,6 @@
     <description>Recent content in Atom-Haskell documentation on Atom-Haskell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Mar 2017 00:05:13 +0300</lastBuildDate>
     
 	<atom:link href="https://atom-haskell.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +13,7 @@
     <item>
       <title>Installing packages</title>
       <link>https://atom-haskell.github.io/installation/installing-packages/</link>
-      <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://atom-haskell.github.io/installation/installing-packages/</guid>
       <description>Refer to Atom Flight Manual section on packages for more detailed information
@@ -26,7 +25,7 @@
     <item>
       <title>Language-Haskell</title>
       <link>https://atom-haskell.github.io/core-packages/language-haskell/</link>
-      <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://atom-haskell.github.io/core-packages/language-haskell/</guid>
       <description>Language-Haskell adds syntax highlighting and snippets to Haskell files in Atom.
@@ -34,52 +33,6 @@ Auto-indent If you don&amp;rsquo;t like current auto-indentation settings, you c
 Atom is using oniguruma for regular expression, and, as such, expressionhas to be a string, not a javascript regexp. You&amp;rsquo;ll also have to escape \.
  To disable auto-indent:
 &amp;quot;.haskell.source&amp;quot;: editor: increaseIndentPattern: &#39;&#39;  By default, increaseIndentPattern has the following value:</description>
-    </item>
-    
-    <item>
-      <title>IDE-Haskell-REPL</title>
-      <link>https://atom-haskell.github.io/extra-packages/ide-haskell-repl/</link>
-      <pubDate>Tue, 28 Mar 2017 03:06:41 +0000</pubDate>
-      
-      <guid>https://atom-haskell.github.io/extra-packages/ide-haskell-repl/</guid>
-      <description>This package provides a way to interact with ghci (or, alternatively, cabal repl or stack ghci) from Atom.
-Repl backend selection ide-haskell-repl will try to automatically select the correct repl backend (stack/cabal/ghci) based on current builder chosen in ide-haskell-cabal. You can choose none builder to use ghci in plain projects (a.k.a. projects with no *.cabal file).
-If ide-haskell-cabal is unavailable (e.g. disabled), ide-haskell-repl will fall back to defaultRepl specified in settings.</description>
-    </item>
-    
-    <item>
-      <title>IDE-Haskell-Hoogle</title>
-      <link>https://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</link>
-      <pubDate>Mon, 13 Mar 2017 03:03:47 +0300</pubDate>
-      
-      <guid>https://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</guid>
-      <description>Install package ide-haskell-hoogle. Refer to Atom Flight Manual for details on installing packages.
-Package supports using either local Hoogle database, or remote one (hosted on https://haskell.org/hoogle/ and/or http://hoogle.haskell.org/)
- Local database requires hoogle executable, plus you will need to build hoogle database for hoogle itself to work. Remote database obviously requires connection to the Internet  Choosing remote or local database By default, package uses &amp;ldquo;new&amp;rdquo; remote database from http://hoogle.</description>
-    </item>
-    
-    <item>
-      <title>IDE-Haskell</title>
-      <link>https://atom-haskell.github.io/core-packages/ide-haskell/</link>
-      <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
-      
-      <guid>https://atom-haskell.github.io/core-packages/ide-haskell/</guid>
-      <description>IDE-Haskell Atom package provides basic capabilities, as well as a backend for other Atom-Haskell packages to use.
-Known conflicts This package relies on grammar defined by language-haskell. Any other Haskell grammar packages (such as haskell-grammar) may conflict with it.
-Configuration Package is fully configurable via Edit → Preferences → Packages → ide-haskell → Settings
-You will likely need to specify full path to prettifier executable, at the very least.</description>
-    </item>
-    
-    <item>
-      <title>Installing binary dependencies</title>
-      <link>https://atom-haskell.github.io/installation/installing-binary-dependencies/</link>
-      <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
-      
-      <guid>https://atom-haskell.github.io/installation/installing-binary-dependencies/</guid>
-      <description>Supported ghc-mod versions are 5.6. and up.
- These instructions assume you want to use stylish-haskell as a prettifier. If you would like to use hindent or brittany instead, substitute that in place of stylish-haskell below.
-Bear in mind that prettifier has to be able to work as a unix filter, i.e. accept input on STDIN and return output on STDOUT.
- The Atom-Haskell packages (and this instructions) assume that you have at least a minimal Haskell toolchain installed on your system.</description>
     </item>
     
     <item>
@@ -93,9 +46,55 @@ Bear in mind that prettifier has to be able to work as a unix filter, i.e. accep
     </item>
     
     <item>
+      <title>IDE-Haskell</title>
+      <link>https://atom-haskell.github.io/core-packages/ide-haskell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://atom-haskell.github.io/core-packages/ide-haskell/</guid>
+      <description>IDE-Haskell Atom package provides basic capabilities, as well as a backend for other Atom-Haskell packages to use.
+Known conflicts This package relies on grammar defined by language-haskell. Any other Haskell grammar packages (such as haskell-grammar) may conflict with it.
+Configuration Package is fully configurable via Edit → Preferences → Packages → ide-haskell → Settings
+You will likely need to specify full path to prettifier executable, at the very least.</description>
+    </item>
+    
+    <item>
+      <title>IDE-Haskell-Hoogle</title>
+      <link>https://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</guid>
+      <description>Install package ide-haskell-hoogle. Refer to Atom Flight Manual for details on installing packages.
+Package supports using either local Hoogle database, or remote one (hosted on https://haskell.org/hoogle/ and/or http://hoogle.haskell.org/)
+ Local database requires hoogle executable, plus you will need to build hoogle database for hoogle itself to work. Remote database obviously requires connection to the Internet  Choosing remote or local database By default, package uses &amp;ldquo;new&amp;rdquo; remote database from http://hoogle.</description>
+    </item>
+    
+    <item>
+      <title>IDE-Haskell-REPL</title>
+      <link>https://atom-haskell.github.io/extra-packages/ide-haskell-repl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://atom-haskell.github.io/extra-packages/ide-haskell-repl/</guid>
+      <description>This package provides a way to interact with ghci (or, alternatively, cabal repl or stack ghci) from Atom.
+Repl backend selection ide-haskell-repl will try to automatically select the correct repl backend (stack/cabal/ghci) based on current builder chosen in ide-haskell-cabal. You can choose none builder to use ghci in plain projects (a.k.a. projects with no *.cabal file).
+If ide-haskell-cabal is unavailable (e.g. disabled), ide-haskell-repl will fall back to defaultRepl specified in settings.</description>
+    </item>
+    
+    <item>
+      <title>Installing binary dependencies</title>
+      <link>https://atom-haskell.github.io/installation/installing-binary-dependencies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://atom-haskell.github.io/installation/installing-binary-dependencies/</guid>
+      <description>Supported ghc-mod versions are 5.6. and up.
+ These instructions assume you want to use stylish-haskell as a prettifier. If you would like to use hindent or brittany instead, substitute that in place of stylish-haskell below.
+Bear in mind that prettifier has to be able to work as a unix filter, i.e. accept input on STDIN and return output on STDOUT.
+ The Atom-Haskell packages (and this instructions) assume that you have at least a minimal Haskell toolchain installed on your system.</description>
+    </item>
+    
+    <item>
       <title>IDE-Haskell-Cabal</title>
       <link>https://atom-haskell.github.io/core-packages/ide-haskell-cabal/</link>
-      <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://atom-haskell.github.io/core-packages/ide-haskell-cabal/</guid>
       <description>The ide-haskell-cabal package provides a build backend for ide-haskell package based on cabal or stack.
@@ -116,7 +115,7 @@ Core Atom-Haskell packages  language-haskell &amp;ndash; Syntax highlighting and
     <item>
       <title>Haskell-ghc-mod</title>
       <link>https://atom-haskell.github.io/core-packages/haskell-ghc-mod/</link>
-      <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://atom-haskell.github.io/core-packages/haskell-ghc-mod/</guid>
       <description>Haskell ghc-mod opens pipe to ghc-mod and queries types, info, typechecks and lints current file.
@@ -128,7 +127,7 @@ For example, if you have ghc-mod in /home/user/.cabal/bin/, you need to write /h
     <item>
       <title>Autocomplete-Haskell</title>
       <link>https://atom-haskell.github.io/core-packages/autocomplete-haskell/</link>
-      <pubDate>Mon, 13 Mar 2017 00:05:13 +0300</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://atom-haskell.github.io/core-packages/autocomplete-haskell/</guid>
       <description>Autocomplete-haskell provides autocompletion facilities for your Haskell hacking. It relies on scope names provided by language-haskell and haskell-completion-backend service, provided by haskell-ghc-mod

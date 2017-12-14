@@ -4,12 +4,10 @@
   
   <url>
     <loc>https://atom-haskell.github.io/installation/installing-packages/</loc>
-    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://atom-haskell.github.io/core-packages/language-haskell/</loc>
-    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
   </url>
   
   <url>
@@ -17,28 +15,7 @@
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/extra-packages/ide-haskell-repl/</loc>
-    <lastmod>2017-03-28T03:06:41+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</loc>
-    <lastmod>2017-03-13T03:03:47+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://atom-haskell.github.io/core-packages/ide-haskell/</loc>
-    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://atom-haskell.github.io/installation/installing-binary-dependencies/</loc>
-    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://atom-haskell.github.io/</loc>
-    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
   </url>
   
   <url>
@@ -46,18 +23,31 @@
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/installation/</loc>
-    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
+    <loc>https://atom-haskell.github.io/core-packages/ide-haskell/</loc>
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/core-packages/ide-haskell-cabal/</loc>
-    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
+    <loc>https://atom-haskell.github.io/extra-packages/ide-haskell-hoogle/</loc>
+  </url>
+  
+  <url>
+    <loc>https://atom-haskell.github.io/extra-packages/ide-haskell-repl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://atom-haskell.github.io/installation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://atom-haskell.github.io/installation/installing-binary-dependencies/</loc>
   </url>
   
   <url>
     <loc>https://atom-haskell.github.io/core-packages/</loc>
-    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://atom-haskell.github.io/core-packages/ide-haskell-cabal/</loc>
   </url>
   
   <url>
@@ -65,18 +55,15 @@
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/core-packages/haskell-ghc-mod/</loc>
-    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
+    <loc>https://atom-haskell.github.io/extra-packages/</loc>
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/extra-packages/</loc>
-    <lastmod>2017-03-28T03:06:41+00:00</lastmod>
+    <loc>https://atom-haskell.github.io/core-packages/haskell-ghc-mod/</loc>
   </url>
   
   <url>
     <loc>https://atom-haskell.github.io/core-packages/autocomplete-haskell/</loc>
-    <lastmod>2017-03-13T00:05:13+03:00</lastmod>
   </url>
   
   <url>
