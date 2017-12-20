@@ -13,17 +13,17 @@
     <title>IDE-Haskell-Cabal :: Atom-Haskell</title>
     
     
-    <link href="/css/nucleus.css?1513312835" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1513312835" rel="stylesheet">
-    <link href="/css/hybrid.css?1513312835" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1513312835" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1513312835" rel="stylesheet">
-    <link href="/css/auto-complete.css?1513312835" rel="stylesheet">
-    <link href="/css/theme.css?1513312835" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1513312835" rel="stylesheet">
+    <link href="/css/nucleus.css?1513800619" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1513800619" rel="stylesheet">
+    <link href="/css/hybrid.css?1513800619" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1513800619" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1513800619" rel="stylesheet">
+    <link href="/css/auto-complete.css?1513800619" rel="stylesheet">
+    <link href="/css/theme.css?1513800619" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1513800619" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1513312835"></script>
+    <script src="/js/jquery-2.x.min.js?1513800619"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -127,14 +127,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1513312835"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1513312835"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1513800619"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1513800619"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/atom-haskell.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1513312835"></script>
+<script type="text/javascript" src="/js/search.js?1513800619"></script>
 
     
   </div>
@@ -570,6 +570,7 @@
 <ul>
 <li>
 <ul>
+<li><a href="#switching-between-cabal-and-stack">Switching between <code>cabal</code> and <code>stack</code></a></li>
 <li><a href="#keybindings">Keybindings</a></li>
 </ul></li>
 </ul>
@@ -606,6 +607,18 @@ package based on <code>cabal</code> or <code>stack</code>.</p>
 
 <p>It also provides support for <code>ide-haskell</code>&rsquo;s build target selection by reading and parsing the <code>.cabal</code> file and extracting the available targets (it uses a thin <code>ghcjs</code>-compiled wrapper around the <code>Cabal</code> library to read the <code>.cabal</code> file).</p>
 
+<h2 id="switching-between-cabal-and-stack">Switching between <code>cabal</code> and <code>stack</code></h2>
+
+<p>When you first try building your project (by running <code>ide-haskell-cabal:build</code> command from command palette, for example), you will be asked to specify a builder to use:</p>
+
+<p><img src="/images/399a3ad33f6f603f28703824b4595ea6.png" alt="Command palette-like dialog window with text &quot;Select builder to use with current project&quot;, input box, and three options &quot;cabal&quot;, &quot;stack&quot; and &quot;none&quot;" /></p>
+
+<p>You can select one you&rsquo;d like to use then. Atom will remember your choice. If you wish to choose another builder afterwards, you can do this by running <code>ide-haskell-cabal:set-active-builder</code> command. Alternatively, this same command is available in <strong>Haskell IDE -&gt; Builder -&gt; Set Active Builder</strong> menu item, or via a <code>🔨</code> button on ide-haskell panel:</p>
+
+<p><img src="/images/c52fab5e72d0afff5f835cc03ec2465d.png" alt="Header part of ide-haskell panel, button with hammer and text &quot;stack&quot; highlighted" /></p>
+
+<p>Currently-selected builder is also shown on that exact button, either as button text, or as tooltip (this is configurable from package settings).</p>
+
 <h2 id="keybindings">Keybindings</h2>
 
 <p>Ide-Haskell-Cabal comes with little pre-specified keybindings, so you will need to specify your own, if you want those.</p>
@@ -617,7 +630,7 @@ package based on <code>cabal</code> or <code>stack</code>.</p>
   '': 'ide-haskell-cabal:clean'
   '': 'ide-haskell-cabal:test'
   '': 'ide-haskell-cabal:bench'
-  '': 'ide-haskell-cabal:build-dependencies'
+  '': 'ide-haskell-cabal:deps' # builds only dependencies
   '': 'ide-haskell-cabal:set-build-target'
   '': 'ide-haskell-cabal:set-active-builder'
 </code></pre>
@@ -924,20 +937,20 @@ package based on <code>cabal</code> or <code>stack</code>.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1513312835"></script>
-    <script src="/js/perfect-scrollbar.min.js?1513312835"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1513312835"></script>
-    <script src="/js/jquery.sticky.js?1513312835"></script>
-    <script src="/js/featherlight.min.js?1513312835"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1513312835"></script>
-    <script src="/js/highlight.pack.js?1513312835"></script>
+    <script src="/js/clipboard.min.js?1513800619"></script>
+    <script src="/js/perfect-scrollbar.min.js?1513800619"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1513800619"></script>
+    <script src="/js/jquery.sticky.js?1513800619"></script>
+    <script src="/js/featherlight.min.js?1513800619"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1513800619"></script>
+    <script src="/js/highlight.pack.js?1513800619"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1513312835"></script>
-    <script src="/js/learn.js?1513312835"></script>
-    <script src="/js/hugo-learn.js?1513312835"></script>
+    <script src="/js/modernizr.custom.71422.js?1513800619"></script>
+    <script src="/js/learn.js?1513800619"></script>
+    <script src="/js/hugo-learn.js?1513800619"></script>
 
-    <link href="/mermaid/mermaid.css?1513312835" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1513312835"></script>
+    <link href="/mermaid/mermaid.css?1513800619" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1513800619"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
