@@ -13,17 +13,17 @@
     <title>IDE-Haskell-Cabal :: Atom-Haskell</title>
     
     
-    <link href="/css/nucleus.css?1513800619" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1513800619" rel="stylesheet">
-    <link href="/css/hybrid.css?1513800619" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1513800619" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1513800619" rel="stylesheet">
-    <link href="/css/auto-complete.css?1513800619" rel="stylesheet">
-    <link href="/css/theme.css?1513800619" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1513800619" rel="stylesheet">
+    <link href="/css/nucleus.css?1513809546" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1513809546" rel="stylesheet">
+    <link href="/css/hybrid.css?1513809546" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1513809546" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1513809546" rel="stylesheet">
+    <link href="/css/auto-complete.css?1513809546" rel="stylesheet">
+    <link href="/css/theme.css?1513809546" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1513809546" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1513800619"></script>
+    <script src="/js/jquery-2.x.min.js?1513809546"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -127,14 +127,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1513800619"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1513800619"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1513809546"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1513809546"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/atom-haskell.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1513800619"></script>
+<script type="text/javascript" src="/js/search.js?1513809546"></script>
 
     
   </div>
@@ -245,9 +245,9 @@
  
   
     
-      <li data-nav-id="/installation/installing-packages/" title="Installing packages" class="dd-item ">
-        <a href="/installation/installing-packages/">
-        Installing packages
+      <li data-nav-id="/overview/features/" title="Features" class="dd-item ">
+        <a href="/overview/features/">
+        Features
         
         </a>
     </li>
@@ -264,9 +264,9 @@
  
   
     
-      <li data-nav-id="/installation/installing-binary-dependencies/" title="Installing binary dependencies" class="dd-item ">
-        <a href="/installation/installing-binary-dependencies/">
-        Installing binary dependencies
+      <li data-nav-id="/overview/requirements/" title="Requirements" class="dd-item ">
+        <a href="/overview/requirements/">
+        Requirements
         
         </a>
     </li>
@@ -571,6 +571,7 @@
 <li>
 <ul>
 <li><a href="#switching-between-cabal-and-stack">Switching between <code>cabal</code> and <code>stack</code></a></li>
+<li><a href="#selecting-a-build-target">Selecting a build target</a></li>
 <li><a href="#keybindings">Keybindings</a></li>
 </ul></li>
 </ul>
@@ -605,19 +606,39 @@ package based on <code>cabal</code> or <code>stack</code>.</p>
 <li>The build directory (cabal <code>--builddir</code> parameter). This defaults to <code>dist/</code>.</li>
 </ul>
 
-<p>It also provides support for <code>ide-haskell</code>&rsquo;s build target selection by reading and parsing the <code>.cabal</code> file and extracting the available targets (it uses a thin <code>ghcjs</code>-compiled wrapper around the <code>Cabal</code> library to read the <code>.cabal</code> file).</p>
+<p>It also provides support for build target selection by reading and parsing the cabalfile and extracting the available targets (it uses a thin <code>ghcjs</code>-compiled wrapper around the <code>Cabal</code> library to read the <code>.cabal</code> file).</p>
 
 <h2 id="switching-between-cabal-and-stack">Switching between <code>cabal</code> and <code>stack</code></h2>
 
 <p>When you first try building your project (by running <code>ide-haskell-cabal:build</code> command from command palette, for example), you will be asked to specify a builder to use:</p>
 
-<p><img src="/images/399a3ad33f6f603f28703824b4595ea6.png" alt="Command palette-like dialog window with text &quot;Select builder to use with current project&quot;, input box, and three options &quot;cabal&quot;, &quot;stack&quot; and &quot;none&quot;" /></p>
+<p><img src="/images/399a3ad33f6f603f28703824b4595ea6.png" alt="Command palette-like dialog window with text &quot;Select builder to use with current project&quot; and three options &quot;cabal&quot;, &quot;stack&quot; and &quot;none&quot;" /></p>
 
 <p>You can select one you&rsquo;d like to use then. Atom will remember your choice. If you wish to choose another builder afterwards, you can do this by running <code>ide-haskell-cabal:set-active-builder</code> command. Alternatively, this same command is available in <strong>Haskell IDE -&gt; Builder -&gt; Set Active Builder</strong> menu item, or via a <code>🔨</code> button on ide-haskell panel:</p>
 
-<p><img src="/images/c52fab5e72d0afff5f835cc03ec2465d.png" alt="Header part of ide-haskell panel, button with hammer and text &quot;stack&quot; highlighted" /></p>
+<p><img src="/images/c52fab5e72d0afff5f835cc03ec2465d.png" alt="Header part of ide-haskell panel, button with hammer icon and text &quot;stack&quot; highlighted" /></p>
 
 <p>Currently-selected builder is also shown on that exact button, either as button text, or as tooltip (this is configurable from package settings).</p>
+
+<h2 id="selecting-a-build-target">Selecting a build target</h2>
+
+<p>You can also select which target (of the ones defined in cabalfile) to build. You can do that by either running <code>ide-haskell-cabal:set-build-target</code> command, choosing <strong>Haskell IDE -&gt; Builder -&gt; Set Build Target</strong> menu item, or clicking the <code>🎯</code> button on ide-haskell panel:</p>
+
+<p><img src="/images/305c4065f8a41b3d5b61455409268114.png" alt="Header part of ide-haskell panel, button with target icon and text &quot;Auto&quot; highlighted" /></p>
+
+<p>If you do, you will be presented with the list of all available targets in all currently-open Atom project directories:</p>
+
+<p><img src="/images/f0a7f35533a3c5d15c4ff676f57f426f.png" alt="Command palette-like dialog window with text &quot;Select target to build&quot; and several options, &quot;Auto: Auto&quot;, &quot;lambda: Auto&quot;, &quot;lambda: All&quot;, &quot;lambda: lambda&quot;, &quot;lambda: lambda-exe&quot;, &quot;lambda:lambda-test&quot;" /></p>
+
+<div class="notices note" ><p>Before ide-haskell-cabal v2.1.0, <code>Auto</code> targets were confusingly called <code>All</code>, and there were no actual <code>All</code> targets.</p>
+</div>
+
+
+<p>Default setting is <code>Auto: Auto</code>, which will automatically select which project and which target to build based on currently-active editor.</p>
+
+<p>Each detected project directory also has target <code>Auto</code> in addition to targets defined in cabalfile. That target constrains automatic selection algorithm to selected project directory, but the target for that project is selected based on currently-active editor.</p>
+
+<p>Finally, detected project directory has the target <code>All</code>, which will build <em>all</em> targets for selected project.</p>
 
 <h2 id="keybindings">Keybindings</h2>
 
@@ -937,20 +958,20 @@ package based on <code>cabal</code> or <code>stack</code>.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1513800619"></script>
-    <script src="/js/perfect-scrollbar.min.js?1513800619"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1513800619"></script>
-    <script src="/js/jquery.sticky.js?1513800619"></script>
-    <script src="/js/featherlight.min.js?1513800619"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1513800619"></script>
-    <script src="/js/highlight.pack.js?1513800619"></script>
+    <script src="/js/clipboard.min.js?1513809546"></script>
+    <script src="/js/perfect-scrollbar.min.js?1513809546"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1513809546"></script>
+    <script src="/js/jquery.sticky.js?1513809546"></script>
+    <script src="/js/featherlight.min.js?1513809546"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1513809546"></script>
+    <script src="/js/highlight.pack.js?1513809546"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1513800619"></script>
-    <script src="/js/learn.js?1513800619"></script>
-    <script src="/js/hugo-learn.js?1513800619"></script>
+    <script src="/js/modernizr.custom.71422.js?1513809546"></script>
+    <script src="/js/learn.js?1513809546"></script>
+    <script src="/js/hugo-learn.js?1513809546"></script>
 
-    <link href="/mermaid/mermaid.css?1513800619" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1513800619"></script>
+    <link href="/mermaid/mermaid.css?1513809546" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1513809546"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
