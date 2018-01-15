@@ -30,7 +30,7 @@
       <guid>https://atom-haskell.github.io/core-packages/language-haskell/</guid>
       <description>Language-Haskell adds syntax highlighting and snippets to Haskell files in Atom.
 Auto-indent If you don&amp;rsquo;t like current auto-indentation settings, you can define your own regular expression in config.cson (Edit -&amp;gt; Open Your Config), or disable it altogether.
-Atom is using oniguruma for regular expression, and, as such, expressionhas to be a string, not a javascript regexp. You&amp;rsquo;ll also have to escape \.
+Atom is using oniguruma for regular expression, and, as such, expression has to be a string, not a javascript regexp. You&amp;rsquo;ll also have to escape \.
  To disable auto-indent:
 &amp;quot;.haskell.source&amp;quot;: editor: increaseIndentPattern: &#39;&#39;  By default, increaseIndentPattern has the following value:</description>
     </item>
@@ -41,7 +41,7 @@ Atom is using oniguruma for regular expression, and, as such, expressionhas to b
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://atom-haskell.github.io/overview/features/</guid>
-      <description>Sytnax highlighting Grammars:
+      <description>Syntax highlighting Grammars:
  Haskell (*.hs) Literate Haskell (*.lhs) Cabal (*.cabal)  Errors, warnings and lints After saving the current file the check and linter processes will be executed. After processes are finished, the results can be seen in output panel. You can see different kind of results by switching Errors, Warnings and Lints tab buttons. If you click on message&amp;rsquo;s file name in output panel, Atom will open this file and put cursor near problem that triggered output message.</description>
     </item>
     
