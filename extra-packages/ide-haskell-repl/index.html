@@ -13,17 +13,17 @@
     <title>IDE-Haskell-REPL :: Atom-Haskell</title>
     
     
-    <link href="/css/nucleus.css?1539797143" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1539797143" rel="stylesheet">
-    <link href="/css/hybrid.css?1539797143" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1539797143" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1539797143" rel="stylesheet">
-    <link href="/css/auto-complete.css?1539797143" rel="stylesheet">
-    <link href="/css/theme.css?1539797143" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1539797143" rel="stylesheet">
+    <link href="/css/nucleus.css?1569587790" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1569587790" rel="stylesheet">
+    <link href="/css/hybrid.css?1569587790" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1569587790" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1569587790" rel="stylesheet">
+    <link href="/css/auto-complete.css?1569587790" rel="stylesheet">
+    <link href="/css/theme.css?1569587790" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1569587790" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1539797143"></script>
+    <script src="/js/jquery-2.x.min.js?1569587790"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -127,14 +127,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1539797143"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1539797143"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1569587790"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1569587790"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/atom-haskell.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1539797143"></script>
+<script type="text/javascript" src="/js/search.js?1569587790"></script>
 
     
   </div>
@@ -598,6 +598,25 @@
 
 <p>This package provides a way to interact with <code>ghci</code> (or, alternatively, <code>cabal repl</code> or <code>stack ghci</code>) from Atom.</p>
 
+<p>Repl is opened in the context of the current Atom editor, so there is no need to load the file (even though <code>:l filename</code> will work).</p>
+
+<p>Type any ghci command in the bar at the bottom of the window and press <code>shift+enter</code> (on Win and Linux) or <code>cmd+enter</code> (on macOS) to execute it.</p>
+
+<p>Take a look at <a href="https://github.com/atom-haskell/ide-haskell-repl/blob/master/keymaps/ide-haskell-repl.cson">ide-haskell-repl.cson</a> for other default bindings.</p>
+
+<p>Four buttons alongside the command bar (outlined green in the picture below) allow for further actions</p>
+
+<p><img src="/images/e1316f16efe8dcacd42aedccc3f8ff63.png" alt="Action buttons" /></p>
+
+<p>Left to right:</p>
+
+<ul>
+<li>reload file and repeat last command</li>
+<li>automatic reload file and repeat last command on file save (toggle)</li>
+<li>interrupt current computation</li>
+<li>clear window</li>
+</ul>
+
 <h2 id="repl-backend-selection">Repl backend selection</h2>
 
 <p>ide-haskell-repl will try to automatically select the correct repl backend (<code>stack</code>/<code>cabal</code>/<code>ghci</code>) based on current builder chosen in <code>ide-haskell-cabal</code>. You can choose <code>none</code> builder to use <code>ghci</code> in plain projects (a.k.a. projects with no <code>*.cabal</code> file).</p>
@@ -951,20 +970,20 @@ types on mouse hover and checking for errors/warnings on save.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1539797143"></script>
-    <script src="/js/perfect-scrollbar.min.js?1539797143"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1539797143"></script>
-    <script src="/js/jquery.sticky.js?1539797143"></script>
-    <script src="/js/featherlight.min.js?1539797143"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1539797143"></script>
-    <script src="/js/highlight.pack.js?1539797143"></script>
+    <script src="/js/clipboard.min.js?1569587790"></script>
+    <script src="/js/perfect-scrollbar.min.js?1569587790"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1569587790"></script>
+    <script src="/js/jquery.sticky.js?1569587790"></script>
+    <script src="/js/featherlight.min.js?1569587790"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1569587790"></script>
+    <script src="/js/highlight.pack.js?1569587790"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1539797143"></script>
-    <script src="/js/learn.js?1539797143"></script>
-    <script src="/js/hugo-learn.js?1539797143"></script>
+    <script src="/js/modernizr.custom.71422.js?1569587790"></script>
+    <script src="/js/learn.js?1569587790"></script>
+    <script src="/js/hugo-learn.js?1569587790"></script>
 
-    <link href="/mermaid/mermaid.css?1539797143" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1539797143"></script>
+    <link href="/mermaid/mermaid.css?1569587790" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1569587790"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

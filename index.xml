@@ -75,8 +75,8 @@ Package supports using either local Hoogle database, or remote one (hosted on ht
       
       <guid>https://atom-haskell.github.io/extra-packages/ide-haskell-repl/</guid>
       <description>This package provides a way to interact with ghci (or, alternatively, cabal repl or stack ghci) from Atom.
-Repl backend selection ide-haskell-repl will try to automatically select the correct repl backend (stack/cabal/ghci) based on current builder chosen in ide-haskell-cabal. You can choose none builder to use ghci in plain projects (a.k.a. projects with no *.cabal file).
-If ide-haskell-cabal is unavailable (e.g. disabled), ide-haskell-repl will fall back to defaultRepl specified in settings.</description>
+Repl is opened in the context of the current Atom editor, so there is no need to load the file (even though :l filename will work).
+Type any ghci command in the bar at the bottom of the window and press shift+enter (on Win and Linux) or cmd+enter (on macOS) to execute it.</description>
     </item>
     
     <item>
