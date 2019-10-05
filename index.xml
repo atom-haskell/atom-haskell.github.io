@@ -92,6 +92,17 @@ Bear in mind that prettifier has to be able to work as a unix filter, i.e. accep
     </item>
     
     <item>
+      <title>IDE-Haskell-HLint</title>
+      <link>https://atom-haskell.github.io/extra-packages/ide-haskell-hlint/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://atom-haskell.github.io/extra-packages/ide-haskell-hlint/</guid>
+      <description>This package is intended to replace the functionality of running HLint originally provided by Haskell-ghc-mod, without requiring ghc-mod.
+The package requires IDE-Haskell, which provides GUI and other niceties. It also requires you to have a working hlint binary on your system.
+Installing HLint Installation follows the standard pattern of any Haskell library or program: run cabal update to update your local Hackage database, then cabal v2-install hlint to install HLint.</description>
+    </item>
+    
+    <item>
       <title>IDE-Haskell-Cabal</title>
       <link>https://atom-haskell.github.io/core-packages/ide-haskell-cabal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

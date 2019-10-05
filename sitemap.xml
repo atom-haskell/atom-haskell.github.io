@@ -43,6 +43,10 @@
   </url>
   
   <url>
+    <loc>https://atom-haskell.github.io/extra-packages/ide-haskell-hlint/</loc>
+  </url>
+  
+  <url>
     <loc>https://atom-haskell.github.io/core-packages/</loc>
   </url>
   
