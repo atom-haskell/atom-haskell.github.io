@@ -13,17 +13,17 @@
     <title>IDE-Haskell-REPL :: Atom-Haskell</title>
     
     
-    <link href="/css/nucleus.css?1570300602" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1570300602" rel="stylesheet">
-    <link href="/css/hybrid.css?1570300602" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1570300602" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1570300602" rel="stylesheet">
-    <link href="/css/auto-complete.css?1570300602" rel="stylesheet">
-    <link href="/css/theme.css?1570300602" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1570300602" rel="stylesheet">
+    <link href="/css/nucleus.css?1583935565" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1583935565" rel="stylesheet">
+    <link href="/css/hybrid.css?1583935565" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1583935565" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1583935565" rel="stylesheet">
+    <link href="/css/auto-complete.css?1583935565" rel="stylesheet">
+    <link href="/css/theme.css?1583935565" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1583935565" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1570300602"></script>
+    <script src="/js/jquery-2.x.min.js?1583935565"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -127,14 +127,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1570300602"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1570300602"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1583935565"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1583935565"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/atom-haskell.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1570300602"></script>
+<script type="text/javascript" src="/js/search.js?1583935565"></script>
 
     
   </div>
@@ -659,13 +659,17 @@ types on mouse hover and checking for errors/warnings on save.</p>
 
 <p>On Windows, interrupting ghci will kill it. There is no good solution to this problem at the moment, but there is a &ldquo;bad&rdquo; solution.</p>
 
-<p>You need to get <code>ghci-wrapper.exe</code> executable from <a href="https://github.com/atom-haskell/win-ghci-wrapper/releases">https://github.com/atom-haskell/win-ghci-wrapper/releases</a> (or if you don&rsquo;t trust random binaries you&rsquo;ve downloaded from the Internet, you can build it from source &ndash; you only really need ghc for that)</p>
+<p>Open the command palette (ctrl/cmd+shift+P) and run <code>ide-haskell-repl:setup-ghci-wrapper</code> command. This will download <code>ghci-wrapper.exe</code>, place it into Atom&rsquo;s user directory, and change ide-haskell-repl configuration to use it.</p>
+
+<p>If you prefer to have more control, you can do the same manually. Get the <code>ghci-wrapper.exe</code> executable from <a href="https://github.com/atom-haskell/win-ghci-wrapper/releases">https://github.com/atom-haskell/win-ghci-wrapper/releases</a> (or if you don&rsquo;t trust random binaries you&rsquo;ve downloaded from the Internet, you can build it from source &ndash; you only really need ghc for that)</p>
 
 <p>Then you need to specify full path to this executable in <code>ghciWrapperPath</code> setting of this package.</p>
 
 <p>For example, if you placed <code>ghci-wrapper.exe</code> in <code>C:\Downloads</code> directory, you need to put <code>C:\Downloads\ghci-wrapper.exe</code> in <code>ghciWrapperPath</code> setting.</p>
 
 <p>Finally, restart any open REPL sessions.</p>
+
+<p>Note that at the time of writing, <code>cabal v2-repl</code> (cabal-install v3.0.0.0) will still die when interrupted. There is no workaround at the moment.</p>
 
 <h2 id="repl-specific-commands">Repl-specific commands</h2>
 
@@ -1008,20 +1012,20 @@ types on mouse hover and checking for errors/warnings on save.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1570300602"></script>
-    <script src="/js/perfect-scrollbar.min.js?1570300602"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1570300602"></script>
-    <script src="/js/jquery.sticky.js?1570300602"></script>
-    <script src="/js/featherlight.min.js?1570300602"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1570300602"></script>
-    <script src="/js/highlight.pack.js?1570300602"></script>
+    <script src="/js/clipboard.min.js?1583935565"></script>
+    <script src="/js/perfect-scrollbar.min.js?1583935565"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1583935565"></script>
+    <script src="/js/jquery.sticky.js?1583935565"></script>
+    <script src="/js/featherlight.min.js?1583935565"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1583935565"></script>
+    <script src="/js/highlight.pack.js?1583935565"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1570300602"></script>
-    <script src="/js/learn.js?1570300602"></script>
-    <script src="/js/hugo-learn.js?1570300602"></script>
+    <script src="/js/modernizr.custom.71422.js?1583935565"></script>
+    <script src="/js/learn.js?1583935565"></script>
+    <script src="/js/hugo-learn.js?1583935565"></script>
 
-    <link href="/mermaid/mermaid.css?1570300602" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1570300602"></script>
+    <link href="/mermaid/mermaid.css?1583935565" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1583935565"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
