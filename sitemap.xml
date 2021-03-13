@@ -39,7 +39,7 @@
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/installation/installing-binary-dependencies/</loc>
+    <loc>https://atom-haskell.github.io/legacy-packages/installing-binary-dependencies/</loc>
   </url>
   
   <url>
@@ -63,16 +63,20 @@
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/core-packages/haskell-ghc-mod/</loc>
+    <loc>https://atom-haskell.github.io/legacy-packages/haskell-ghc-mod/</loc>
   </url>
   
   <url>
-    <loc>https://atom-haskell.github.io/core-packages/autocomplete-haskell/</loc>
+    <loc>https://atom-haskell.github.io/legacy-packages/autocomplete-haskell/</loc>
   </url>
   
   <url>
     <loc>https://atom-haskell.github.io/categories/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://atom-haskell.github.io/legacy-packages/</loc>
   </url>
   
   <url>

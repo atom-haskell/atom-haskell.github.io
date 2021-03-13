@@ -18,8 +18,8 @@
       <guid>https://atom-haskell.github.io/installation/installing-packages/</guid>
       <description>Refer to Atom Flight Manual section on packages for more detailed information
  You can find a complete list of Atom-Haskell packages on atom.io package registry
- There are binary dependencies which are not touched upon in this section. Refer to next section for a guide.
- Pick-and-choose approach You can pick and choose what packages you want and do not want to install. However, bear in mind that language-haskell is absolutely mandatory, and ide-haskell is most likely required too.</description>
+ There are binary dependencies which are not touched upon in this section. Refer to the requirements list for more information.
+ You can pick and choose what packages you want and do not want to install. However, bear in mind that language-haskell is absolutely mandatory, and ide-haskell is most likely required too.</description>
     </item>
     
     <item>
@@ -81,10 +81,10 @@ Type any ghci command in the bar at the bottom of the window and press shift+ent
     
     <item>
       <title>Installing binary dependencies</title>
-      <link>https://atom-haskell.github.io/installation/installing-binary-dependencies/</link>
+      <link>https://atom-haskell.github.io/legacy-packages/installing-binary-dependencies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://atom-haskell.github.io/installation/installing-binary-dependencies/</guid>
+      <guid>https://atom-haskell.github.io/legacy-packages/installing-binary-dependencies/</guid>
       <description>Supported ghc-mod versions are 5.6. and up.
  These instructions assume you want to use stylish-haskell as a prettifier. If you would like to use hindent or brittany instead, substitute that in place of stylish-haskell below.
 Bear in mind that prettifier has to be able to work as a unix filter, i.e. accept input on STDIN and return output on STDOUT.
@@ -120,15 +120,15 @@ It supports easy switching between multiple versions of GHC by having a set of c
       
       <guid>https://atom-haskell.github.io/overview/requirements/</guid>
       <description>The Atom-Haskell packages assume that you have at least a minimal Haskell toolchain installed on your system. See https://www.haskell.org/downloads for your options.
-Core Atom-Haskell packages  language-haskell &amp;ndash; Syntax highlighting and Haskell autodetection ABSOLUTELY REQUIRED! ide-haskell &amp;ndash; GUI and minimal utilities ABSOLUTELY REQUIRED! ide-haskell-cabal &amp;ndash; Build Haskell projects with either cabal or stack. Reports errors/warnings on build. haskell-ghc-mod &amp;ndash; ghc-mod integration. Typecheck and lint sources without building, query type information and more.</description>
+Core Atom-Haskell packages  language-haskell &amp;ndash; Syntax highlighting and Haskell autodetection ABSOLUTELY REQUIRED! ide-haskell &amp;ndash; GUI and minimal utilities ABSOLUTELY REQUIRED! ide-haskell-cabal &amp;ndash; Build Haskell projects with either cabal or stack. Reports errors/warnings on build.  Extra Atom-Haskell packages  ide-haskell-hls &amp;ndash; Haskell Language Server support: autocompletion, on-line code typechecking and linting, etc.</description>
     </item>
     
     <item>
       <title>Haskell-ghc-mod</title>
-      <link>https://atom-haskell.github.io/core-packages/haskell-ghc-mod/</link>
+      <link>https://atom-haskell.github.io/legacy-packages/haskell-ghc-mod/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://atom-haskell.github.io/core-packages/haskell-ghc-mod/</guid>
+      <guid>https://atom-haskell.github.io/legacy-packages/haskell-ghc-mod/</guid>
       <description>Haskell ghc-mod opens pipe to ghc-mod and queries types, info, typechecks and lints current file.
 When using with stack, see Using with stack
  Configuration Only configuration option you will likely need to set is additionalPathDirectories. It needs to be set to full path to the directory containing ghc-mod executable, if it is not in your PATH.
@@ -137,10 +137,10 @@ For example, if you have ghc-mod in /home/user/.cabal/bin/, you need to write /h
     
     <item>
       <title>Autocomplete-Haskell</title>
-      <link>https://atom-haskell.github.io/core-packages/autocomplete-haskell/</link>
+      <link>https://atom-haskell.github.io/legacy-packages/autocomplete-haskell/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://atom-haskell.github.io/core-packages/autocomplete-haskell/</guid>
+      <guid>https://atom-haskell.github.io/legacy-packages/autocomplete-haskell/</guid>
       <description>Autocomplete-haskell provides autocompletion facilities for your Haskell hacking. It relies on scope names provided by language-haskell and haskell-completion-backend service, provided by haskell-ghc-mod
 You can show auto-completions for hole _. This will try to find replacements based on type. It&amp;rsquo;s no magic though, so if hole has some crazy type, it won&amp;rsquo;t find anything. You can also refine hole completions based on name by using named holes, e.g. _from
 Sadly, it does not pick up types and/or other symbols defined in current file (ghc-mod seems to be incapable of this feat), so for this you have to rely on default autocomplete-plus SymbolProvider.</description>
