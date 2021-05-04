@@ -21,6 +21,13 @@
 	"content": " Chapter I Overview  Features     Requirements     "
 },
 {
+	"uri": "https://atom-haskell.github.io/extra-packages/ide-haskell-hls/",
+	"title": "IDE-Haskell-HLS",
+	"tags": [],
+	"description": "",
+	"content": " This package provides Haskell Language Server powered IDE features like autocompletion, type/info tooltips, etc.\nThis package depends on the Haskell Language Server binary being available on PATH. More specifically, it runs haskell-language-server-wrapper by default.\nBy far the easiest way to get HLS is to use ghcup via ghcup install hls. However, ghcup isn\u0026rsquo;t available on Windows (except through WSL). Refer to HLS documentation for more detailed installation instructions.\nPackage Dependencies IDE-Haskell-HLS depends on some Atom packages. If those packages are not installed, a prompt should be shown asking if you\u0026rsquo;d like to install them. The dependencies are also listed here for documentation purposes and can be installed manually:\n language-haskell: a single dependency that can\u0026rsquo;t be installed automatically. Haskell Language definitions. ide-haskell: provides most UI elements atom-ide-markdown-service: will be used to render documentation tooltips ide-haskell-hoogle: will be used to open documentation links from tooltips directly in Atom. atom-ide-definitions: provides \u0026ldquo;go to definition\u0026rdquo; functionality atom-ide-outline: provides outline functionality  Configure path to the binary Path to the binary can be configured via ide-haskell-hls.binaryPath option. It is recommended you do not touch this option however and instead add the directory containing your HLS binaries to system PATH.\nCommands IDE-Haskell-HLS provides the following utility commands:\n ide-haskell-hls:restart-all-severs will attempt to restart all HLS processes managed by Atom. ide-haskell-hls:clear-messages will clear out the error message cache on the Atom side. This is useful if you\u0026rsquo;ve, say, removed or renamed a file, and HLS didn\u0026rsquo;t clear the messages for that file automatically.  Project structure Due to some idiosyncrasies of how language server protocol is implemented in Atom, HLS will pick up the project correctly only when the project root is open as a project directory in Atom, i.e. not as a subdirectory.\nThe project root can be either:\n the directory containing the cabal.project file, the directory containing a *.cabal file.  For the common case of a single \u0026ldquo;root\u0026rdquo; directory directly containing multiple directories with loosely-related projects, as, for instance, for course exercises, a cabal.project file with the following contents:\npackages: */*.cabal  should suffice. That is to say, with this cabal.project, the directory tree should look something like this:\n. ├── cabal.project ├── project01 │ ├── project01.cabal │ └── ... ├── project02 │ ├── project02.cabal │ └── ... ├── ... └── projectN ├── projectN.cabal └── ...  "
+},
+{
 	"uri": "https://atom-haskell.github.io/",
 	"title": "Atom-Haskell documentation",
 	"tags": [],
@@ -102,7 +109,7 @@
 	"title": "Extra Packages",
 	"tags": [],
 	"description": "",
-	"content": " Chapter III Extra Packages  IDE-Haskell-Hoogle     IDE-Haskell-REPL     IDE-Haskell-HLint     "
+	"content": " Chapter III Extra Packages  IDE-Haskell-HLS     IDE-Haskell-Hoogle     IDE-Haskell-REPL     IDE-Haskell-HLint     "
 },
 {
 	"uri": "https://atom-haskell.github.io/legacy-packages/haskell-ghc-mod/",

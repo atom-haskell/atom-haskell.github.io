@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>IDE-Haskell :: Atom-Haskell</title>
+    <title>IDE-Haskell-HLS :: Atom-Haskell</title>
     
     
     <link href="/css/nucleus.css?1620130294" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/core-packages/ide-haskell/">
+  <body class="" data-url="/extra-packages/ide-haskell-hls/">
     <nav id="sidebar" class="">
 
 
@@ -272,7 +272,7 @@
   
     
     <li data-nav-id="/core-packages/" title="Core Packages" class="dd-item 
-        parent
+        
         
         
         ">
@@ -315,7 +315,7 @@
  
   
     
-      <li data-nav-id="/core-packages/ide-haskell/" title="IDE-Haskell" class="dd-item active">
+      <li data-nav-id="/core-packages/ide-haskell/" title="IDE-Haskell" class="dd-item ">
         <a href="/core-packages/ide-haskell/">
         IDE-Haskell
         
@@ -361,7 +361,7 @@
   
     
     <li data-nav-id="/extra-packages/" title="Extra Packages" class="dd-item 
-        
+        parent
         
         
         ">
@@ -385,7 +385,7 @@
  
   
     
-      <li data-nav-id="/extra-packages/ide-haskell-hls/" title="IDE-Haskell-HLS" class="dd-item ">
+      <li data-nav-id="/extra-packages/ide-haskell-hls/" title="IDE-Haskell-HLS" class="dd-item active">
         <a href="/extra-packages/ide-haskell-hls/">
         IDE-Haskell-HLS
         
@@ -595,7 +595,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/atom-haskell/atom-haskell-docs/edit/master/content/core-packages/ide-haskell.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/atom-haskell/atom-haskell-docs/edit/master/content/extra-packages/ide-haskell-hls.md" target="blank">
                       <i class="fa fa-code-fork"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -624,7 +624,7 @@
             
           
           
-            <a href='/'>Atom-Haskell documentation</a> > <a href='/core-packages/'>Core Packages</a> > IDE-Haskell
+            <a href='/'>Atom-Haskell documentation</a> > <a href='/extra-packages/'>Extra Packages</a> > IDE-Haskell-HLS
           
          
           
@@ -640,14 +640,10 @@
 <ul>
 <li>
 <ul>
-<li><a href="#known-conflicts">Known conflicts</a></li>
-<li><a href="#configuration">Configuration</a>
-<ul>
-<li><a href="#keyboard-shortcuts">Keyboard shortcuts</a></li>
-<li><a href="#changing-output-panel-look">Changing output panel look</a></li>
-<li><a href="#using-atom-linter-https-atom-io-packages-linter-for-output">Using <a href="https://atom.io/packages/linter">atom-linter</a> for output</a></li>
-<li><a href="#advanced-configuration-since-v2-2-0">Advanced configuration (since v2.2.0)</a></li>
-</ul></li>
+<li><a href="#package-dependencies">Package Dependencies</a></li>
+<li><a href="#configure-path-to-the-binary">Configure path to the binary</a></li>
+<li><a href="#commands">Commands</a></li>
+<li><a href="#project-structure">Project structure</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -662,7 +658,7 @@
         
         <div id="body-inner">
           
-            <h1>IDE-Haskell</h1>
+            <h1>IDE-Haskell-HLS</h1>
           
 
         
@@ -670,154 +666,69 @@
 
 
 
-<p>IDE-Haskell Atom package provides basic capabilities, as well as a backend for other Atom-Haskell packages to use.</p>
+<p>This package provides Haskell Language Server powered IDE features like autocompletion, type/info tooltips, etc.</p>
 
-<h2 id="known-conflicts">Known conflicts</h2>
+<p>This package depends on the Haskell Language Server binary being available on PATH. More specifically, it runs <code>haskell-language-server-wrapper</code> by default.</p>
 
-<p>This package relies on grammar defined by <code>language-haskell</code>. Any other Haskell grammar packages (such as <code>haskell-grammar</code>) may conflict with it.</p>
+<p>By far the easiest way to get HLS is to use <a href="https://www.haskell.org/ghcup/">ghcup</a> via <code>ghcup install hls</code>. However, ghcup isn&rsquo;t available on Windows (except through WSL). Refer to <a href="https://github.com/haskell/haskell-language-server#haskell-language-server">HLS documentation</a> for more detailed installation instructions.</p>
 
-<h2 id="configuration">Configuration</h2>
+<h2 id="package-dependencies">Package Dependencies</h2>
 
-<p>Package is fully configurable via <strong>Edit → Preferences → Packages → ide-haskell
-→ Settings</strong></p>
-
-<p>You will likely need to specify full path to prettifier executable, at the very least.</p>
-
-<p>You might also want to look into <a href="/core-packages/haskell-ghc-mod">configuring haskell-ghc-mod</a> and <a href="/core-packages/ide-haskell-cabal">ide-haskell-cabal</a></p>
-
-<div class="notices note" ><p>Since version 1.0.0, some configuration options have been moved to
-backends, in particular, haskell-ghc-mod. Migration should be automatic, but
-please check if your configuration is correct just in case.</p>
-</div>
-
-
-<h3 id="keyboard-shortcuts">Keyboard shortcuts</h3>
-
-<div class="notices note" ><p>Since version 1.0.0, most commands are provided by
-backends, in particular, haskell-ghc-mod and ide-haskell-cabal. Please revise
-your keymap accordingly.</p>
-</div>
-
-
-<p>Refer to sections on <a href="/core-packages/haskell-ghc-mod#keybindings">haskell-ghc-mod</a> and <a href="/core-packages/ide-haskell-cabal#keybindings">ide-haskell-cabal</a> for details</p>
-
-<p>Ide-Haskell comes with little pre-specified keybindings, so you will need to specify your own, if you want those.</p>
-
-<p>You can edit Atom keybindings by opening &lsquo;Edit → Open Your Keymap&rsquo;. Here is a template for all commands, provided by ide-haskell:</p>
-
-<pre><code class="language-cson">'atom-text-editor.ide-haskell--has-tooltips':
-  'escape': 'ide-haskell:close-tooltip' #this is set by default
-
-'atom-text-editor.ide-haskell':
-  '':'ide-haskell:prettify-file'
-
-'atom-workspace':
-  '': 'ide-haskell:toggle-output'
-  '': 'ide-haskell:next-error'
-  '': 'ide-haskell:prev-error'
-</code></pre>
-
-<h3 id="changing-output-panel-look">Changing output panel look</h3>
-
-<p>Changing output panel look can be achieved with Atom stylesheets. You can open your stylesheet with Edit → Stylesheet&hellip;</p>
-
-<p>Syntax is <a href="http://lesscss.org/">Less</a>. You can use the following selectors:</p>
+<p>IDE-Haskell-HLS depends on some Atom packages. If those packages are not installed, a prompt should be shown asking if you&rsquo;d like to install them. The dependencies are also listed here for documentation purposes and can be installed manually:</p>
 
 <ul>
-<li><code>ide-haskell-panel</code> &ndash; whole panel</li>
-<li><code>ide-haskell-panel-heading</code> &ndash; panel heading (control elements)</li>
-<li><code>ide-hashell-panel-items</code> &ndash; output area</li>
-<li><code>ide-haskell-item-position</code> &ndash; file/line/column of individual message</li>
-<li><code>ide-haskell-item-description</code> &ndash; message itself</li>
+<li><code>language-haskell</code>: a single dependency that can&rsquo;t be installed automatically. Haskell Language definitions.</li>
+<li><code>ide-haskell</code>: provides most UI elements</li>
+<li><code>atom-ide-markdown-service</code>: will be used to render documentation tooltips</li>
+<li><code>ide-haskell-hoogle</code>: will be used to open documentation links from tooltips directly in Atom.</li>
+<li><code>atom-ide-definitions</code>: provides &ldquo;go to definition&rdquo; functionality</li>
+<li><code>atom-ide-outline</code>: provides outline functionality</li>
 </ul>
 
-<p>Please note, that to change font face in <code>ide-haskell-item-description</code>, you need to target it specifically, or use <code>!important</code> specifier.</p>
+<h2 id="configure-path-to-the-binary">Configure path to the binary</h2>
 
-<p>For example, to change font size in whole panel:</p>
+<p>Path to the binary can be configured via <code>ide-haskell-hls.binaryPath</code> option. It is recommended you do not touch this option however and instead add the directory containing your HLS binaries to system PATH.</p>
 
-<pre><code class="language-less">ide-haskell-panel {
-  font-size: 18pt;
-}
-</code></pre>
+<h2 id="commands">Commands</h2>
 
-<p>Or only in output area:</p>
-
-<pre><code class="language-less">ide-haskell-panel-items {
-  font-size: 18pt;
-}
-</code></pre>
-
-<p>To change font face in panel heading:</p>
-
-<pre><code class="language-less">ide-haskell-panel-heading {
-  font-family: &quot;Comic Sans MS&quot;;
-}
-</code></pre>
-
-<p>To change font face in messages themselves:</p>
-
-<pre><code class="language-less">ide-haskell-item-description {
-  font-family: &quot;Fira Mono&quot;;
-}
-</code></pre>
-
-<p>You are free to write any CSS, of course. Bear in mind, however, that any selectors not listed above are subject to sudden change.</p>
-
-<h3 id="using-atom-linter-https-atom-io-packages-linter-for-output">Using <a href="https://atom.io/packages/linter">atom-linter</a> for output</h3>
-
-<p>You can use linter package for displaying some messages. Install linter package, and then change <code>messageDisplayFrontend</code> in ide-haskell settings to <code>linter</code>. Restart Atom.</p>
-
-<h3 id="advanced-configuration-since-v2-2-0">Advanced configuration (since v2.2.0)</h3>
-
-<p>Some <code>ide-haskell</code> settings are root scope-sensitive, meaning they can have different values defined in config depending on editor grammar.</p>
-
-<p>Atom Flight Manual gives a brief introduction into scoped settings <a href="http://flight-manual.atom.io/behind-atom/sections/scoped-settings-scopes-and-scope-descriptors/">here</a>, but here&rsquo;s a short refresher.</p>
-
-<p>You can define setting overrides in your config file (<strong>Edit → Config&hellip;</strong>) under specific scope selectors. For example, imagine this is your config:</p>
-
-<pre><code class="language-cson">&quot;*&quot;:
-  &quot;ide-haskell&quot;:
-    stylishHaskellPath: &quot;stylish-haskell&quot;
-</code></pre>
-
-<p>Now, consider you would like to use <code>hindent</code>, but only for Literate Haskell files (since <code>stylish-haskell</code> doesn&rsquo;t support <code>lhs</code>). You can do that by extending your config like so:</p>
-
-<pre><code class="language-cson">&quot;*&quot;:
-  &quot;ide-haskell&quot;:
-    stylishHaskellPath: &quot;stylish-haskell&quot;
-&quot;.text.tex.latex.haskell&quot;:
-  &quot;ide-haskell&quot;:
-    stylishHaskellPath: &quot;hindent&quot;
-</code></pre>
-
-<p>You can learn scope name for a given grammar by opening a file using that grammar and running <code>editor:log-cursor-scope</code> command. The first (topmost) entry in the message would be the root scope, the rest are syntax scopes.</p>
-
-<p>Bear in mind ide-haskell isn&rsquo;t sensitive to syntax scopes (since it&rsquo;s either overly complicated to support or doesn&rsquo;t make much sense).</p>
-
-<p>Here&rsquo;s a list of settings that are sensitive to root scope:</p>
+<p>IDE-Haskell-HLS provides the following utility commands:</p>
 
 <ul>
-<li><code>onSavePrettify</code></li>
-<li><code>onSavePrettifyFormats</code>
-
-<ul>
-<li><code>source*c2hs</code></li>
-<li><code>source*cabal</code></li>
-<li><code>source*hsc2hs</code></li>
-<li><code>source*haskell</code></li>
-<li><code>text*tex*latex*haskell</code></li>
-<li><code>source*hsig</code></li>
-</ul></li>
-<li><code>expressionTypeInterval</code></li>
-<li><code>onCursorMove</code></li>
-<li><code>stylishHaskellPath</code></li>
-<li><code>stylishHaskellArguments</code></li>
-<li><code>cabalPath</code></li>
+<li><code>ide-haskell-hls:restart-all-severs</code> will attempt to restart all HLS processes managed by Atom.</li>
+<li><code>ide-haskell-hls:clear-messages</code> will clear out the error message cache on the Atom side. This is useful if you&rsquo;ve, say, removed or renamed a file, and HLS didn&rsquo;t clear the messages for that file automatically.</li>
 </ul>
 
-<div class="notices warning" ><p>This list can be incomplete.</p>
-</div>
+<h2 id="project-structure">Project structure</h2>
 
+<p>Due to some idiosyncrasies of how language server protocol is implemented in Atom, HLS will pick up the project correctly only when the project root is open as a project directory in Atom, i.e. not as a subdirectory.</p>
+
+<p>The project root can be either:</p>
+
+<ol>
+<li>the directory containing the <code>cabal.project</code> file,</li>
+<li>the directory containing a <code>*.cabal</code> file.</li>
+</ol>
+
+<p>For the common case of a single &ldquo;root&rdquo; directory directly containing multiple directories with loosely-related projects, as, for instance, for course exercises, a <code>cabal.project</code> file with the following contents:</p>
+
+<pre><code class="language-cabal">packages: */*.cabal
+</code></pre>
+
+<p>should suffice. That is to say, with this <code>cabal.project</code>, the directory tree should look something like this:</p>
+
+<pre><code>.
+├── cabal.project
+├── project01
+│   ├── project01.cabal
+│   └── ...
+├── project02
+│   ├── project02.cabal
+│   └── ...
+├── ...
+└── projectN
+    ├── projectN.cabal
+    └── ...
+</code></pre>
 
 
 <footer class=" footline" >
@@ -939,158 +850,6 @@ your keymap accordingly.</p>
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -1150,6 +909,155 @@ your keymap accordingly.</p>
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
         
@@ -1157,10 +1065,10 @@ your keymap accordingly.</p>
 
 
         
-            <a class="nav nav-prev" href="/core-packages/language-haskell/" title="Language-Haskell"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/extra-packages/" title="Extra Packages"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/core-packages/ide-haskell-cabal/" title="IDE-Haskell-Cabal" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/extra-packages/ide-haskell-hoogle/" title="IDE-Haskell-Hoogle" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

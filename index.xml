@@ -36,6 +36,18 @@ Atom is using oniguruma for regular expression, and, as such, expression has to 
     </item>
     
     <item>
+      <title>IDE-Haskell-HLS</title>
+      <link>https://atom-haskell.github.io/extra-packages/ide-haskell-hls/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://atom-haskell.github.io/extra-packages/ide-haskell-hls/</guid>
+      <description>This package provides Haskell Language Server powered IDE features like autocompletion, type/info tooltips, etc.
+This package depends on the Haskell Language Server binary being available on PATH. More specifically, it runs haskell-language-server-wrapper by default.
+By far the easiest way to get HLS is to use ghcup via ghcup install hls. However, ghcup isn&amp;rsquo;t available on Windows (except through WSL). Refer to HLS documentation for more detailed installation instructions.
+Package Dependencies IDE-Haskell-HLS depends on some Atom packages.</description>
+    </item>
+    
+    <item>
       <title>Features</title>
       <link>https://atom-haskell.github.io/overview/features/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

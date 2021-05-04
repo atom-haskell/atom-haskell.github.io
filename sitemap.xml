@@ -15,6 +15,10 @@
   </url>
   
   <url>
+    <loc>https://atom-haskell.github.io/extra-packages/ide-haskell-hls/</loc>
+  </url>
+  
+  <url>
     <loc>https://atom-haskell.github.io/</loc>
   </url>
   
